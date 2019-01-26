@@ -6,7 +6,9 @@ public class Player {
 
 	//container class for player data
 
-	public int space; // space id for where the player is -- 1 is start, 100 is finish
+	public int space; // space id for where the player is -- 1 is start, Globals.tileCount is finish
+	public int actionPointsMax;
+	public int actionPoints;
 	public int inventory[64][2]; //inventory of items, can hold 64 unique items, and infinite count of that item
 
 	//instantiate the playerdata object so it doesnt break things
@@ -15,12 +17,21 @@ public class Player {
 		for (int i = 0; i < 64; i++){
 			inventory[i][0] = 0;
 			inventory[i][1] = 0;
+			actionPointsMax = 0;
+			actionPoints = 0;
 		}
 	}
 
-	//set the player to space 1
+	//set the player to space 1, set the AP to Globals.startingAP
 	public void start () {
 		space = 1;
+		actionPointsMax = Globals.startingAP;
+		actionPoints = Globals.startingAP;
+	}
+
+	//start the player turn
+	public void startTurn () {
+		actionPoints = actionPointsMax;
 	}
 
 	//move the player along the board by x distance
@@ -32,8 +43,8 @@ public class Player {
 				space -= distance;
 			}
 		} else {
-			if (space + distance >= 100) {
-				space = 100;
+			if (space + distance >= Globals.tileCount) {
+				space = Globals.tileCount;
 			} else {
 				space += distance;
 			}
@@ -68,6 +79,25 @@ public class Player {
 			}
 		}
 		return false;
+	}
+
+	//change the max AP by delta
+	public void changeApMax (int delta) {
+		if (actionPointsMax - delta <= 1) {
+			actionPointsMax = 1;
+		} else {
+			actionPointsMax -= delta;
+		}
+	}
+
+	//spend x AP. fails if you dont have enough AP
+	public bool spendAp (int p) {
+		if (actionPoints - p < 0) {
+			return false;
+		} else {
+			actionPoints -= p;
+			return true;
+		}
 	}
 
 }
