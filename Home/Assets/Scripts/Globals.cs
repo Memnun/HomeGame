@@ -31,6 +31,7 @@ public class Globals : MonoBehaviour {
 	16-steal a card
 	17-burn another player's card
 	18-move to opposite side of the ring
+	19-reverse turn order(? modifying things low level)
     */
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
