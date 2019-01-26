@@ -12,7 +12,13 @@ public class Globals : MonoBehaviour {
     tile 48: jump to 66 if you have 20, otherwise wrap to 1
     tile 82: jump to 92 if you have 80, otherwise wrap to 51
     tile 100: jump to 103 if you have 160, otherwise wrap to 85
-    
+    itemids:
+    1-resource
+    2-gain X resources
+    3-gain X AP for this turn
+    4-jump instantly to passage
+    5-advance X spaces instantly
+    6-protect yourself from hinderances for 1 turn
     */
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

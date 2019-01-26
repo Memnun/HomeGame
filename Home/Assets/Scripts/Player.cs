@@ -10,6 +10,7 @@ public class Player : MonoBehaviour {
 	public int actionPointsMax;
 	public int actionPoints;
 	public Vector2[] inventory; //inventory of items, can hold 64 unique items, and infinite count of that item
+	public bool targetable;
 
 	//instantiate the playerdata object so it doesnt break things
 	public void init () {
@@ -21,6 +22,7 @@ public class Player : MonoBehaviour {
 		}
 		actionPointsMax = 0;
 		actionPoints = 0;
+		targetable = true;
 	}
 
 	//set the player to space 1, set the AP to Globals.startingAP
@@ -33,6 +35,7 @@ public class Player : MonoBehaviour {
 	//start the player turn
 	public void startTurn () {
 		actionPoints = actionPointsMax;
+		targetable = true;
 	}
 
 	//move the player along the board by x distance
