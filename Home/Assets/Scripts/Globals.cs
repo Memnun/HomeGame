@@ -19,6 +19,19 @@ public class Globals : MonoBehaviour {
     4-jump instantly to passage
     5-advance X spaces instantly
     6-protect yourself from hinderances for 1 turn
+	7-steal AP
+	8-steal Resources
+	9-swap places with another player
+	10-trap a space(? how to select a specific tile)
+	11-move another player anywhere(? how to select a specific tile)
+	12-counter card(? too many edge cases)
+	13-shuffle(? hard to implement)
+	14-pot of greed
+	15-move another player back
+	16-steal a card
+	17-burn another player's card
+	18-move to opposite side of the ring
+	19-reverse turn order(? modifying things low level)
     */
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
