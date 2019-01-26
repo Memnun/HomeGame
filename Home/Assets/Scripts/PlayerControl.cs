@@ -35,9 +35,9 @@ public class PlayerControl : MonoBehaviour
 
 		if (player.space == 48 && player.inventory[0].y >= 20) {
 			player.jump(66);
-		} else if (player.space == 82 && player.inventory[0].y >= 40) {
+		} else if (player.space == 82 && player.inventory[0].y >= 80) {
 			player.jump(92);
-		} else if (player.space == 100 && player.inventory[0].y >= 80) {
+		} else if (player.space == 100 && player.inventory[0].y >= 16) {
 			player.jump(103);
 		}
 	}

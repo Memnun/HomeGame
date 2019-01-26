@@ -10,8 +10,8 @@ public class Globals : MonoBehaviour {
 
     materials go in the Resources folder
     tile 48: jump to 66 if you have 20, otherwise wrap to 1
-    tile 82: jump to 92 if you have 40, otherwise wrap to 51
-    tile 100: jump to 103 if you have 80, otherwise wrap to 85
+    tile 82: jump to 92 if you have 80, otherwise wrap to 51
+    tile 100: jump to 103 if you have 160, otherwise wrap to 85
     
     */
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
