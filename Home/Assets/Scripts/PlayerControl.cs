@@ -7,7 +7,7 @@ public class PlayerControl : MonoBehaviour
 
 	public Player player;
 
-	private void moveForward(int distance) {
+	public void moveForward(int distance) {
 		if (player.space == 48) {
 			player.jump(1);
 		} else if (player.space == 82) {

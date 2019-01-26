@@ -28,6 +28,7 @@ public class Player : MonoBehaviour {
 	//set the player to space 1, set the AP to Globals.startingAP
 	public void startup () {
 		space = 1;
+		inventory[0].x = 1;
 		actionPointsMax = Globals.startingAP;
 		actionPoints = Globals.startingAP;
 	}
