@@ -88,11 +88,7 @@
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{553ade57-450e-45be-bb30-abd5953d661f}"/>
-    <object class="MultiSound" id="{534b8bff-da1a-4825-8db2-4aa31d434481}">
-        <property name="length">
-            <value>5</value>
-        </property>
-    </object>
+    <object class="MultiSound" id="{534b8bff-da1a-4825-8db2-4aa31d434481}"/>
     <object class="EventMixerGroup" id="{43d066f0-92f5-4213-90fe-a27e23facd60}">
         <property name="name">
             <value>Audio 1</value>
