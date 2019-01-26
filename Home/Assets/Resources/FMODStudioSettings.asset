@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: C:\Users\Memnun\Desktop\HomeGame\FmodProject\Game Jam.fspro
-  SourceProjectPathUnformatted: C:\Users\Memnun\Desktop\HomeGame\FmodProject\Game
+  sourceProjectPath: /Users/williamslaptop/Git/HomeGame/FmodProject/Game/ Jam.fspro
+  SourceProjectPathUnformatted: /Users/williamslaptop/Git/HomeGame/FmodProject/Game\
     Jam.fspro
-  SourceBankPathUnformatted: C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build
+  SourceBankPathUnformatted: /Users/williamslaptop/Git/HomeGame/FmodProject/Game\Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0
