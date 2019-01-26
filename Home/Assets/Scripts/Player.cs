@@ -84,10 +84,10 @@ public class Player : MonoBehaviour {
 
 	//change the max AP by delta
 	public void changeApMax (int delta) {
-		if (actionPointsMax - delta <= 1) {
+		if (actionPointsMax + delta <= 1) {
 			actionPointsMax = 1;
 		} else {
-			actionPointsMax -= delta;
+			actionPointsMax += delta;
 		}
 	}
 

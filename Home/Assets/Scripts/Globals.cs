@@ -12,6 +12,7 @@ public class Globals : MonoBehaviour {
     tile 48: jump to 66 if you have 20, otherwise wrap to 1
     tile 82: jump to 92 if you have 40, otherwise wrap to 51
     tile 100: jump to 103 if you have 80, otherwise wrap to 85
+    
     */
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -20,15 +21,15 @@ public class Globals : MonoBehaviour {
     public static int players;
     public static Player currentPlayer;
     public static int currentPlayerNumber;
-    public static Player[] playerList = new Player[2];
+    public static Player[] playerList = new Player[4];
 
 
     void Start () {
     	Globals.players = 2;//test
-    	/*switch (players) {
-    		case 2:*/
+    	switch (players) {
+    		case 2:
 	    		Globals.playerList[0] = GameObject.Find("Player1").GetComponent<Player>();
-	    		Globals.playerList[1] = GameObject.Find("Player2").GetComponent<Player>();/*
+	    		Globals.playerList[1] = GameObject.Find("Player2").GetComponent<Player>();
 	    		break;
     		case 3:
     			Globals.playerList[0] = GameObject.Find("Player1").GetComponent<Player>();
@@ -44,7 +45,7 @@ public class Globals : MonoBehaviour {
     		default:
     			break;
 
-    	}*/
+    	}
     	Globals.currentPlayer = Globals.playerList[1];
     }
 

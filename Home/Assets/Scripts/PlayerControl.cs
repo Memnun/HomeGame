@@ -20,9 +20,11 @@ public class PlayerControl : MonoBehaviour
 
 		GameObject newTile = GameObject.Find("Tile ("+player.space+")");
 
+		transform.position = newTile.transform.position;
+
 		if (newTile.GetComponent<ResourceTileBehavior>() != null) {
 			if (newTile.GetComponent<ResourceTileBehavior>().isJumpedOn == 0) {newTile.GetComponent<ResourceTileBehavior>().isJumpedOn = 1;}
-			player.gainResource(0,1);
+			player.gainResource(1,1);
 		} else if (newTile.GetComponent<CardTileBehavior>() != null) {
 			if (newTile.GetComponent<CardTileBehavior>().isJumpedOn == 0) {newTile.GetComponent<CardTileBehavior>().isJumpedOn = 1;}
 			player.gainResource(2,1);
@@ -33,7 +35,7 @@ public class PlayerControl : MonoBehaviour
 
 		if (player.space == 48 && player.inventory[0].y >= 20) {
 			player.jump(66);
-		} else if (player.space == 51 && player.inventory[0].y >= 40) {
+		} else if (player.space == 82 && player.inventory[0].y >= 40) {
 			player.jump(92);
 		} else if (player.space == 100 && player.inventory[0].y >= 80) {
 			player.jump(103);
