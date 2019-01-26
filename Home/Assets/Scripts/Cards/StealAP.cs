@@ -17,9 +17,11 @@ public class StealAP : BaseCard
 
     //function for using the card with two player targets
     public bool Activation (Player target1, Player target2) {
-    	target2.changeApMax(-1);
-		target1.changeApMax(1);
-        return true;
+		if (target2.targetable) {
+			target2.changeApMax(-1);
+			target1.changeApMax(1);
+			return true;
+		} return false;
     }
 
     //more abstract 2-target activator, for modifying non-player data

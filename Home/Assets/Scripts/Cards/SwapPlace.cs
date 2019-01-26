@@ -2,21 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PotOfGreed : BaseCard
+public class SwapPlace : BaseCard
 {
-    public int itemID = 14;
-    public string longName = "Gain 2 Cards";
+    public int itemID = 9;
+    public string longName = "Exchange Places";
 
     //the function to call when a player uses this particular card; target single player
     public bool Activation (Player target) {
-    	target.gainResource(Random.Range(2,15),1);
-		target.gainResource(Random.Range(2,15),1);
+		//
     	return false;
     }
 
     //function for using the card with two player targets
     public bool Activation (Player target1, Player target2) {
-		//
+		if (target2.targetable) {
+			int x = target1.space;
+			target1.space = target2.space;
+			target2.space = x;
+		}
         return false;
     }
 

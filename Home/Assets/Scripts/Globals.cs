@@ -27,6 +27,10 @@ public class Globals : MonoBehaviour {
 	12-counter card(? too many edge cases)
 	13-shuffle(? hard to implement)
 	14-pot of greed
+	15-move another player back
+	16-steal a card
+	17-burn another player's card
+	18-move to opposite side of the ring
     */
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

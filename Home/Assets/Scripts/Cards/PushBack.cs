@@ -2,26 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StealResources : BaseCard
+public class PushBack : BaseCard
 {
-    public int itemID = 8;
-    public string longName = "Steal Resources";
+    public int itemID = 15;
+    public string longName = "Move Player Back";
 
-    private int x = 3;
+    private int x = -3;
 
     //the function to call when a player uses this particular card; target single player
     public bool Activation (Player target) {
-    	//
-    	return false;
+    	if (target.targetable) {
+			player.move(x);
+			return true;
+		} return false;
     }
 
     //function for using the card with two player targets
     public bool Activation (Player target1, Player target2) {
-		if (target2.targetable) {
-    	target2.gainResource(1,(0-x));
-		target1.gainResource(1,x);
-        return true;
-		} return false;
+    	//
+        return false;
     }
 
     //more abstract 2-target activator, for modifying non-player data

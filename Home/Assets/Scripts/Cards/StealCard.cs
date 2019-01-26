@@ -2,25 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StealResources : BaseCard
+public class StealCard : BaseCard
 {
-    public int itemID = 8;
-    public string longName = "Steal Resources";
+    public int itemID = 16;
+    public string longName = "Steal A Card";
 
-    private int x = 3;
+    private int x = 0;
 
     //the function to call when a player uses this particular card; target single player
     public bool Activation (Player target) {
     	//
-    	return false;
+		return false;
     }
 
     //function for using the card with two player targets
     public bool Activation (Player target1, Player target2) {
-		if (target2.targetable) {
-    	target2.gainResource(1,(0-x));
-		target1.gainResource(1,x);
-        return true;
+    	if (target2.targetable) {
+			for (int i = 1; i<64; i++) {
+				if (target2.inventory[i].y > 0) {
+					target2.gainResource(target2.inventory[i].x,-1);
+					target1.gainResource(target2.inventory[i].x,1);
+					return true;
+				}
+			}
 		} return false;
     }
 
