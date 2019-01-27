@@ -1,18 +1,14 @@
 fileFormatVersion: 2
-guid: aed4702806144d64992bbdfe43493ab5
+guid: 9a54a77fc11528340844d7199052e0f5
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: polySurface4
-    100004: polySurface9
     400000: //RootNode
-    400002: polySurface4
-    400004: polySurface9
-    2100000: lambert1
-    2300000: polySurface9
-    3300000: polySurface9
-    4300000: polySurface9
+    2100000: UVGRID
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: MotherTree
   externalObjects: {}
   materials:
     importMaterials: 1

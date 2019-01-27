@@ -7,518 +7,73 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000000008F4CC828 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000000089CF3178 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
 [LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
 [LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 20098112
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 42816
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 42304
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000C602F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D0C2F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFCA9681100
 [LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFCA96810D0
 [LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFCA96811D0
 [LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFCA9681290
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000008F613C18
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000918DB5F8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Berry Get 2', format=2, channels=2, frequency=48000, lengthbytes=72768, lengthpcm=73853, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.484009.
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Step3', format=2, channels=2, frequency=48000, lengthbytes=1728, lengthpcm=6034, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.348145.
 [LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
 [LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 20098112
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 42816
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 42304
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000C602F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D0C2F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFCA9681100
 [LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFCA96810D0
 [LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFCA96811D0
 [LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFCA9681290
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000008F613C18
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000918DB5F8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Berry Get 3', format=2, channels=2, frequency=48000, lengthbytes=73952, lengthpcm=73481, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.406616.
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Step1', format=2, channels=2, frequency=48000, lengthbytes=1536, lengthpcm=5977, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.532379.
 [LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
 [LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 20098112
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 42816
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 42304
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000C602F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000D0C2F5FC
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFCA9681100
 [LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFCA96810D0
 [LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFCA96811D0
 [LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFCA9681290
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000000008F613C18
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000918DB5F8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Berry Get 1', format=2, channels=2, frequency=48000, lengthbytes=54176, lengthpcm=51887, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.482605.
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000008F523448
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000008F523448
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000008F522A28
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000008F522A28
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000008F522F38
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000008F522F38
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000008F523448
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000008F523448
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000008F522BD8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000008F522BD8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000008F523448
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000008F523448
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000008F522A28
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000008F522A28
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000008F522F38
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000008F522F38
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000008F523448
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000008F523448
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000008F522BD8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000008F522BD8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000008F523448
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000008F523448
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000008F522A28
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000008F522A28
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000008F522F38
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000008F522F38
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000008F523448
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000008F523448
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000008F522BD8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000008F522BD8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000008F523448
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000008F523448
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000008F522A28
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000008F522A28
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000008F522F38
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000008F522F38
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000008F523448
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000008F523448
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000008F522BD8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000008F522BD8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000008F523448
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000008F523448
-[LOG] SystemI::createSound                     : filename = C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000008F5235F8 : node = 0000000073DDE570
-[LOG] SystemI::createSound                     : add node to async list : head = 00000000772C5FD8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000008F5235F8
-[LOG] SystemI::createSound                     : filename = C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSound                     :     setdata soundi = 000000008F523958 : node = 0000000073DDE6C0
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 20098112
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000000772C5FD8.  list count = 0
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 42816
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSound                     :     filename = C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000073DDE688
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSound                     :     setdata soundi = 0000000079D5E8B8 : node = 000000009E388DE0
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 4500
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000000772C5FD8.  list count = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Amb, Forest, Stream, Quiet, MS_02', format=2, channels=2, frequency=48000, lengthbytes=2089472, lengthpcm=8054762, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.021820.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000008F5235F8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000008F523958
-[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 20098112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 42816
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000073DDE7D8
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 4500
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='WINTER Forest wind moderate with trees rustling and barks creaking, North Laurentian Woods, Canada_LOOP.LR', format=2, channels=2, frequency=48000, lengthbytes=2154688, lengthpcm=7849880, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.171570.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000008F523958
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000079D5E8B8
-[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 20098112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 42816
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000009E388EF8
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 4500
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='NS01_007_Forest birds', format=2, channels=2, frequency=48000, lengthbytes=1263456, lengthpcm=4704000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.562673.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000079D5E8B8
-[LOG] SoundI::getSubSound                      : sound 000000008F5235F8.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 000000008F523958.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 0000000079D5E8B8.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Amb, Forest, Stream, Quiet, MS_02 (000000008F522518)
-[LOG] SoundI::release                          :     Amb, Forest, Stream, Quiet, MS_02 (00000000772C6368)
-[LOG] SoundI::release                          :     Amb, Forest, Stream, Quiet, MS_02 (000000008F523298)
-[LOG] SoundI::release                          : WINTER Forest wind moderate with trees rustling and barks creaking, North Laurentian Woods, Canada_LOOP.LR (000000008F523B08)
-[LOG] SoundI::release                          :     WINTER Forest wind moderate with trees rustling and barks creaking, North Laurentian Woods, Canada_LOOP.LR (00000000772C2F68)
-[LOG] SoundI::release                          :     WINTER Forest wind moderate with trees rustling and barks creaking, North Laurentian Woods, Canada_LOOP.LR (000000008F5221B8)
-[LOG] SoundI::release                          : NS01_007_Forest birds (000000008F523CB8)
-[LOG] SoundI::release                          :     NS01_007_Forest birds (00000000772C3108)
-[LOG] SoundI::release                          :     NS01_007_Forest birds (000000008F522D88)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000008F522A28
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000008F522A28
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000008F522F38
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000008F522F38
-[LOG] SystemI::createSound                     : filename = C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0000000079D5D7D8 : node = 000000009E389710
-[LOG] SystemI::createSound                     : add node to async list : head = 00000000772C5FD8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000079D5D7D8
-[LOG] SystemI::createSound                     : filename = C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSound                     :     setdata soundi = 0000000079D5DB38 : node = 000000009E389080
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 20098112
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000000772C5FD8.  list count = 0
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 42816
-[LOG] SystemI::createSound                     :     filename = C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000009E389828
-[LOG] SystemI::createSound                     :     setdata soundi = 0000000079D5E1F8 : node = 000000009E389860
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000000772C5FD8.  list count = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2051
-[LOG] SystemI::createSound                     :     filename = C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 0000000079D5E708 : node = 000000009E3895C0
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000000772C5FD8.  list count = 2
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Rabbits', format=2, channels=2, frequency=48000, lengthbytes=2525216, lengthpcm=2363077, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000079D5D7D8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000079D5DB38
-[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 20098112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 42816
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000009E389198
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2051
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Foxes', format=2, channels=2, frequency=48000, lengthbytes=2760480, lengthpcm=2264614, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.965332.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000079D5DB38
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000079D5E1F8
-[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 20098112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 42816
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000009E389978
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2051
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Squirrels', format=2, channels=2, frequency=48000, lengthbytes=3194656, lengthpcm=2467691, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000079D5E1F8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000079D5E708
-[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 20098112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 42816
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000009E3896D8
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2051
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Hedgehogs', format=2, channels=2, frequency=48000, lengthbytes=2848992, lengthpcm=2363077, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.875061.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000079D5E708
-[LOG] SoundI::getSubSound                      : sound 0000000079D5D7D8.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 0000000079D5DB38.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 0000000079D5E1F8.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 0000000079D5E708.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Rabbits (000000008F5226C8)
-[LOG] SoundI::release                          :     Rabbits (00000000772C3FA8)
-[LOG] SoundI::release                          :     Rabbits (000000008F523448)
-[LOG] SoundI::release                          : Foxes (000000008F5237A8)
-[LOG] SoundI::release                          :     Foxes (00000000772C3448)
-[LOG] SoundI::release                          :     Foxes (000000008F522BD8)
-[LOG] SoundI::release                          : Squirrels (000000008F5230E8)
-[LOG] SoundI::release                          :     Squirrels (00000000772C3788)
-[LOG] SoundI::release                          :     Squirrels (000000008F522A28)
-[LOG] SoundI::release                          : Hedgehogs (000000008F523E68)
-[LOG] SoundI::release                          :     Hedgehogs (0000000079D0CEE8)
-[LOG] SoundI::release                          :     Hedgehogs (000000008F522F38)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000079D5EC18
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000079D5EC18
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000079D5E3A8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000079D5E3A8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000079D5EC18
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000079D5EC18
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000073DAB318
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000073DAB318
-[LOG] SystemI::createSound                     : filename = C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0000000073DAB4C8 : node = 000000009E388F30
-[LOG] SystemI::createSound                     : add node to async list : head = 00000000772C5FD8.  list count = 0
-[LOG] SystemI::createSound                     : filename = C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank : mode 02010082
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000073DAB4C8
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSound                     :     setdata soundi = 0000000073DAA3E8 : node = 000000009E388B40
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 20098112
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000000772C5FD8.  list count = 0
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 42816
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000009E389048
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSound                     :     filename = C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 4500
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSound                     :     setdata soundi = 0000000073DAB678 : node = 000000009E388C90
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000000772C5FD8.  list count = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Amb, Forest, Stream, Quiet, MS_02', format=2, channels=2, frequency=48000, lengthbytes=2089472, lengthpcm=8054762, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.021820.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000073DAB4C8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000073DAA3E8
-[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 20098112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 42816
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000009E388C58
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 4500
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='WINTER Forest wind moderate with trees rustling and barks creaking, North Laurentian Woods, Canada_LOOP.LR', format=2, channels=2, frequency=48000, lengthbytes=2154688, lengthpcm=7849880, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.171570.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000073DAA3E8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000073DAB678
-[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 20098112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 42816
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000009E388DA8
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 4500
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='NS01_007_Forest birds', format=2, channels=2, frequency=48000, lengthbytes=1263456, lengthpcm=4704000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.562673.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000073DAB678
-[LOG] SoundI::getSubSound                      : sound 0000000073DAB4C8.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 0000000073DAA3E8.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 0000000073DAB678.  Subsound index 0 / 1
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000073DABB88
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000073DABB88
-[LOG] SoundI::release                          : Amb, Forest, Stream, Quiet, MS_02 (000000008F5235F8)
-[LOG] SoundI::release                          :     Amb, Forest, Stream, Quiet, MS_02 (000000009E623A38)
-[LOG] SoundI::release                          :     Amb, Forest, Stream, Quiet, MS_02 (0000000079D5D478)
-[LOG] SoundI::release                          : WINTER Forest wind moderate with trees rustling and barks creaking, North Laurentian Woods, Canada_LOOP.LR (000000008F523958)
-[LOG] SoundI::release                          :     WINTER Forest wind moderate with trees rustling and barks creaking, North Laurentian Woods, Canada_LOOP.LR (000000009E621678)
-[LOG] SoundI::release                          :     WINTER Forest wind moderate with trees rustling and barks creaking, North Laurentian Woods, Canada_LOOP.LR (0000000079D5D628)
-[LOG] SoundI::release                          : NS01_007_Forest birds (0000000079D5E8B8)
-[LOG] SoundI::release                          :     NS01_007_Forest birds (000000009E621CF8)
-[LOG] SoundI::release                          :     NS01_007_Forest birds (0000000079D5EA68)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000079D5EC18
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000079D5EC18
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000079D5E3A8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000079D5E3A8
-[LOG] SystemI::createSound                     : filename = C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0000000073DAA598 : node = 000000009E388DE0
-[LOG] SystemI::createSound                     : add node to async list : head = 00000000772C5FD8.  list count = 0
-[LOG] SystemI::createSound                     : filename = C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank : mode 02010082
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000073DAA598
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSound                     :     setdata soundi = 0000000073DAAAA8 : node = 000000009E3891D0
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000000772C5FD8.  list count = 0
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 20098112
-[LOG] SystemI::createSound                     :     filename = C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 42816
-[LOG] SystemI::createSound                     :     setdata soundi = 000000008F522A28 : node = 000000009E389320
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000000772C5FD8.  list count = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000009E388EF8
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 4500
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Amb, Forest, Stream, Quiet, MS_02', format=2, channels=2, frequency=48000, lengthbytes=2089472, lengthpcm=8054762, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.021820.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000073DAA598
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000073DAAAA8
-[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 20098112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 42816
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000009E3892E8
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 4500
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='WINTER Forest wind moderate with trees rustling and barks creaking, North Laurentian Woods, Canada_LOOP.LR', format=2, channels=2, frequency=48000, lengthbytes=2154688, lengthpcm=7849880, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.171570.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000073DAAAA8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000008F522A28
-[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 20098112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 42816
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000009E389438
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 4500
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='NS01_007_Forest birds', format=2, channels=2, frequency=48000, lengthbytes=1263456, lengthpcm=4704000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.562673.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000008F522A28
-[LOG] SoundI::getSubSound                      : sound 0000000073DAA598.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 0000000073DAAAA8.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 000000008F522A28.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Amb, Forest, Stream, Quiet, MS_02 (0000000073DAB4C8)
-[LOG] SoundI::release                          :     Amb, Forest, Stream, Quiet, MS_02 (000000009E621E98)
-[LOG] SoundI::release                          :     Amb, Forest, Stream, Quiet, MS_02 (0000000073DAB828)
-[LOG] SoundI::release                          : WINTER Forest wind moderate with trees rustling and barks creaking, North Laurentian Woods, Canada_LOOP.LR (0000000073DAA3E8)
-[LOG] SoundI::release                          :     WINTER Forest wind moderate with trees rustling and barks creaking, North Laurentian Woods, Canada_LOOP.LR (000000009E623558)
-[LOG] SoundI::release                          :     WINTER Forest wind moderate with trees rustling and barks creaking, North Laurentian Woods, Canada_LOOP.LR (0000000073DAA088)
-[LOG] SoundI::release                          : NS01_007_Forest birds (0000000073DAB678)
-[LOG] SoundI::release                          :     NS01_007_Forest birds (000000009E623078)
-[LOG] SoundI::release                          :     NS01_007_Forest birds (0000000073DAA238)
-[LOG] SystemI::createSound                     : filename = C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000008F523958 : node = 000000009E388F30
-[LOG] SystemI::createSound                     : add node to async list : head = 00000000772C5FD8.  list count = 0
-[LOG] SystemI::createSound                     : filename = C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank : mode 02010082
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000008F523958
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSound                     :     setdata soundi = 000000008F522518 : node = 000000009E389470
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000000772C5FD8.  list count = 0
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 20098112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 42816
-[LOG] SystemI::createSound                     :     filename = C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000009E389048
-[LOG] SystemI::createSound                     :     setdata soundi = 000000008F523B08 : node = 000000009E388C90
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000000772C5FD8.  list count = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2051
-[LOG] SystemI::createSound                     :     filename = C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 000000008F522BD8 : node = 000000009E388B40
-[LOG] SystemI::createSound                     :     add node to async list : head = 00000000772C5FD8.  list count = 2
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Rabbits', format=2, channels=2, frequency=48000, lengthbytes=2525216, lengthpcm=2363077, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000008F523958
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000008F522518
-[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 20098112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 42816
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000009E389588
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2051
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Foxes', format=2, channels=2, frequency=48000, lengthbytes=2760480, lengthpcm=2264614, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.965332.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000008F522518
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000008F523B08
-[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 20098112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 42816
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000009E388DA8
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2051
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Squirrels', format=2, channels=2, frequency=48000, lengthbytes=3194656, lengthpcm=2467691, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000008F523B08
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000008F522BD8
-[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build\Desktop/Master Bank.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 20098112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 42816
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000009E388C58
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2051
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Hedgehogs', format=2, channels=2, frequency=48000, lengthbytes=2848992, lengthpcm=2363077, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.875061.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000008F522BD8
-[LOG] SoundI::getSubSound                      : sound 000000008F523958.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 000000008F522518.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 000000008F523B08.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 000000008F522BD8.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Rabbits (0000000079D5D7D8)
-[LOG] SoundI::release                          :     Rabbits (000000009E624258)
-[LOG] SoundI::release                          :     Rabbits (0000000079D5EC18)
-[LOG] SoundI::release                          : Squirrels (0000000079D5E1F8)
-[LOG] SoundI::release                          :     Squirrels (000000009E624DB8)
-[LOG] SoundI::release                          :     Squirrels (0000000073DAB318)
-[LOG] SoundI::release                          : Hedgehogs (0000000079D5E708)
-[LOG] SoundI::release                          :     Hedgehogs (000000009E6236F8)
-[LOG] SoundI::release                          :     Hedgehogs (0000000073DABB88)
-[LOG] SoundI::release                          : Foxes (0000000079D5DB38)
-[LOG] SoundI::release                          :     Foxes (000000009E624C18)
-[LOG] SoundI::release                          :     Foxes (0000000079D5E3A8)
-[LOG] SoundI::release                          : NS01_007_Forest birds (000000008F522A28)
-[LOG] SoundI::release                          :     NS01_007_Forest birds (000000009E623218)
-[LOG] SoundI::release                          :     NS01_007_Forest birds (000000008F5237A8)
-[LOG] SoundI::release                          : WINTER Forest wind moderate with trees rustling and barks creaking, North Laurentian Woods, Canada_LOOP.LR (0000000073DAAAA8)
-[LOG] SoundI::release                          :     WINTER Forest wind moderate with trees rustling and barks creaking, North Laurentian Woods, Canada_LOOP.LR (000000009E620FF8)
-[LOG] SoundI::release                          :     WINTER Forest wind moderate with trees rustling and barks creaking, North Laurentian Woods, Canada_LOOP.LR (000000008F523E68)
-[LOG] SoundI::release                          : Amb, Forest, Stream, Quiet, MS_02 (0000000073DAA598)
-[LOG] SoundI::release                          :     Amb, Forest, Stream, Quiet, MS_02 (000000009E623A38)
-[LOG] SoundI::release                          :     Amb, Forest, Stream, Quiet, MS_02 (000000008F5230E8)
-[LOG] SoundI::release                          : Hedgehogs (000000008F522BD8)
-[LOG] SoundI::release                          :     Hedgehogs (000000009E6214D8)
-[LOG] SoundI::release                          :     Hedgehogs (000000008F5226C8)
-[LOG] SoundI::release                          : Squirrels (000000008F523B08)
-[LOG] SoundI::release                          :     Squirrels (000000009E623898)
-[LOG] SoundI::release                          :     Squirrels (000000008F5221B8)
-[LOG] SoundI::release                          : Foxes (000000008F522518)
-[LOG] SoundI::release                          :     Foxes (000000009E621338)
-[LOG] SoundI::release                          :     Foxes (000000008F523CB8)
-[LOG] SoundI::release                          : Rabbits (000000008F523958)
-[LOG] SoundI::release                          :     Rabbits (000000009E6243F8)
-[LOG] SoundI::release                          :     Rabbits (000000008F5235F8)
-[LOG] SoundI::release                          :  (000000008FC5C8B8)
-[LOG] SoundI::release                          :     Berry Get 1 (000000009E622ED8)
-[LOG] SoundI::release                          :  (00000000922DBCE8)
-[LOG] SoundI::release                          :     Berry Get 2 (0000000079D0D088)
-[LOG] SoundI::release                          :  (00000000922DC2A8)
-[LOG] SoundI::release                          :     Berry Get 3 (000000009E6219B8)
-[LOG] SoundI::release                          :  (00000000922DBE58)
-[LOG] SoundI::release                          :     Step1 (00000000772C6B88)
-[LOG] SoundI::release                          :  (00000000922DC138)
-[LOG] SoundI::release                          :     Step2 (00000000772C6D28)
-[LOG] SoundI::release                          :  (00000000922DBFC8)
-[LOG] SoundI::release                          :     Step3 (00000000772C66A8)
-[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Step2', format=2, channels=2, frequency=48000, lengthbytes=1376, lengthpcm=5999, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.892761.
+[LOG] SoundI::release                          :  (00000000925B7818)
+[LOG] SoundI::release                          :     Step1 (0000000079D0D088)
+[LOG] SoundI::release                          :  (00000000925B70E8)
+[LOG] SoundI::release                          :     Step2 (00000000772C5E88)
+[LOG] SoundI::release                          :  (00000000925B6E08)
+[LOG] SoundI::release                          :     Step3 (0000000079D0CEE8)
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] SystemI::close                           : Closed.

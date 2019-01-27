@@ -32,12 +32,12 @@ public class CardHandler : MonoBehaviour
     }
 
     private void motionlessWalk (Player player) {
-		if (player.space == 48) {
+		if (player.space == 28) {
 			player.jump(1);
-		} else if (player.space == 82) {
-			player.jump(51);
-		} else if (player.space == 100) {
-			player.jump(85);
+		} else if (player.space == 46) {
+			player.jump(29);
+		} else if (player.space == 56) {
+			player.jump(47);
 		} else {
 			player.move(1);
 		}
@@ -52,12 +52,12 @@ public class CardHandler : MonoBehaviour
     			target1.GetComponent<Player>().actionPoints +=1;
     			return true;
     		case 4:
-    			if (target1.GetComponent<Player>().space <= 48) {
-    				target1.GetComponent<Player>().jump(48);
-    			} else if (target1.GetComponent<Player>().space <= 82) {
-    				target1.GetComponent<Player>().jump(82);
+    			if (target1.GetComponent<Player>().space <= 28) {
+    				target1.GetComponent<Player>().jump(28);
+    			} else if (target1.GetComponent<Player>().space <= 46) {
+    				target1.GetComponent<Player>().jump(35);
     			} else {
-    				target1.GetComponent<Player>().jump(100);
+    				target1.GetComponent<Player>().jump(48);
     			}
     			return true;
     		case 5:
@@ -122,8 +122,8 @@ public class CardHandler : MonoBehaviour
     			}
     			return false;
     		case 18:
-	    		if (target1.GetComponent<Player>().space <= 48) {
-	    			for (int i = 0; i<23; i++) {
+	    		if (target1.GetComponent<Player>().space <= 28) {
+	    			for (int i = 0; i<13; i++) {
 	    				motionlessWalk(target1.GetComponent<Player>());
 	    			}
 	    			target1.GetComponent<PlayerControl>().moveForward(1);

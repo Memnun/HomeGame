@@ -8,19 +8,20 @@ public class PlayerControl : MonoBehaviour
 
 	public Player player;
 	public Button PlayerMove;
-	public Button PlayerDraw;
-	public Button PlayerPlay;
+	public Button PlayerCollect;
+	public Button PlayerCheck;
+	public Button PlayerEnd;
 
 	//public GameObject MainCamera;
     //public GameObject Player1POS, Player2POS, Player3POS, Player4POS;
 
 	public void moveForward(int distance) {
-		if (player.space == 48) {
+		if (player.space == 28) {
 			player.jump(1);
-		} else if (player.space == 82) {
-			player.jump(51);
-		} else if (player.space == 100) {
-			player.jump(85);
+		} else if (player.space == 46) {
+			player.jump(29);
+		} else if (player.space == 56) {
+			player.jump(47);
 		} else {
 			player.move(distance);
 
@@ -38,7 +39,6 @@ public class PlayerControl : MonoBehaviour
 
 		if (newTile.GetComponent<ResourceTileBehavior>() != null) {
 			if (newTile.GetComponent<ResourceTileBehavior>().isJumpedOn == 0) {newTile.GetComponent<ResourceTileBehavior>().isJumpedOn = 1;}
-			player.gainResource(1,1);
 			player.currentTileType = 1;
 			GameObject.Find("FMOD Audio").GetComponent<GameAudio>().getResource();
 		} else if (newTile.GetComponent<CardTileBehavior>() != null) {
@@ -47,15 +47,16 @@ public class PlayerControl : MonoBehaviour
 		} else if (newTile.GetComponent<EventTileBehavior>() != null) {
 			if (newTile.GetComponent<EventTileBehavior>().isJumpedOn == 0) {newTile.GetComponent<EventTileBehavior>().isJumpedOn = 1;}
 			player.currentTileType = 3;
+			Globals.cardhandler.PlayCard(Random.Range(2,10), player.gameObject, player.gameObject.name == "Player1" ? GameObject.Find("Player2"):GameObject.Find("Player1"));
 		}
 		if (newTile.GetComponent<PassageHandler>() != null) {newTile.GetComponent<PassageHandler>().isJumpedOn = 1;}
 
-		if (player.space == 48 && player.inventory[0].y >= 20) {
-			player.jump(66);
-		} else if (player.space == 82 && player.inventory[0].y >= 80) {
-			player.jump(92);
-		} else if (player.space == 100 && player.inventory[0].y >= 16) {
-			player.jump(103);
+		if (player.space == 28 && player.inventory[0].y >= 10) {
+			player.jump(29);
+		} else if (player.space == 35 && player.inventory[0].y >= 20) {
+			player.jump(47);
+		} else if (player.space == 48 && player.inventory[0].y >= 30) {
+			player.jump(57);
 		}
 	}
 
@@ -132,8 +133,9 @@ public class PlayerControl : MonoBehaviour
 		player.currentTile = newTile;
 		player.animTime = Time.time;
         PlayerMove.onClick.AddListener(MoveCheck);         //Checks if "Move" has been clicked runs PressCheck with action having a value of 1
-        PlayerDraw.onClick.AddListener(DrawCheck);   		//Checks if "Draw" has been clicked runs PressCheck with action having a value of 2
-        PlayerPlay.onClick.AddListener(PlayCheck);      //Checks if "Collect" has been clicked runs PressCheck with action having a value of 3
+        PlayerCollect.onClick.AddListener(CollectCheck);   		//Checks if "Draw" has been clicked runs PressCheck with action having a value of 2
+        PlayerCheck.onClick.AddListener(PlayCheck);      //Checks if "Collect" has been clicked runs PressCheck with action having a value of 3
+        PlayerEnd.onClick.AddListener(EndCheck);
     }
 
 
@@ -151,9 +153,11 @@ public class PlayerControl : MonoBehaviour
    			}
    		}			
 
-    public void DrawCheck(){
+    public void CollectCheck(){
     	if (Globals.currentPlayer == player) {
-    	
+    		if (player.currentTileType == 1 && player.spendAp(1)) {
+    			player.gainResource(1,1);
+    		}
     		if (player.currentTileType == 2 && player.spendAp(2))
     		{
     			cardDraw();
@@ -163,6 +167,13 @@ public class PlayerControl : MonoBehaviour
     		{
     				//failed to draw a card
     		}	
+    	}
+    }
+
+    public void EndCheck(){
+    if (Globals.currentPlayer == player) 
+    	{
+    		player.actionPoints = 0;
     	}
     }
 
@@ -182,5 +193,5 @@ public class PlayerControl : MonoBehaviour
     			//had no cards
     		}*/
     	}
-    }
+    }     
 }

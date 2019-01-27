@@ -33,7 +33,7 @@ public class Player : MonoBehaviour {
 		actionPoints = 0;
 		currentTileType = 0;
 		targetable = true;
-		animSpeed = 2f;
+		animSpeed = 0.67f;
 	}
 
 	//set the player to space 1, set the AP to Globals.startingAP
@@ -120,11 +120,11 @@ public class Player : MonoBehaviour {
 
 	void Update () {
 		transform.position = Vector3.Lerp(currentPos, currentTile.transform.position, (Time.time-animTime)*animSpeed);
-		if (space < 49) {
+		if (space < 29) {
 			currentSeason = 1;
-		} else if (space < 83) {
+		} else if (space < 47) {
 			currentSeason = 2;
-		} else if (space < 101) {
+		} else if (space < 57) {
 			currentSeason = 3;
 		} else {
 			currentSeason = 4;

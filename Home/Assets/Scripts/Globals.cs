@@ -24,25 +24,29 @@ public class Globals : MonoBehaviour {
     */
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    public static int tileCount = 103;
+    public static int tileCount = 57;
     public static int startingAP = 2;
     public static int players;
     public static Player currentPlayer;
     public static int currentPlayerNumber;
     public static Player[] playerList = new Player[4];
+    public static CardHandler cardhandler;
 
 
     void Start () {
-    	Globals.players = 4;
+        cardhandler = new CardHandler();
     	switch (players) {
     		case 2:
 	    		Globals.playerList[0] = GameObject.Find("Player1").GetComponent<Player>();
 	    		Globals.playerList[1] = GameObject.Find("Player2").GetComponent<Player>();
+                GameObject.Find("Player3").SetActive(false);
+                GameObject.Find("Player4").SetActive(false);
 	    		break;
     		case 3:
     			Globals.playerList[0] = GameObject.Find("Player1").GetComponent<Player>();
 	    		Globals.playerList[1] = GameObject.Find("Player2").GetComponent<Player>();
 	    		Globals.playerList[2] = GameObject.Find("Player3").GetComponent<Player>();
+                GameObject.Find("Player4").SetActive(false);
 	    		break;
     		case 4:
     			Globals.playerList[0] = GameObject.Find("Player1").GetComponent<Player>();
