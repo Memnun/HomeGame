@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerControl : MonoBehaviour
 {
 
 	public Player player;
+	public Button PlayerMove;
+	public Button PlayerDraw;
+	public Button PlayerPlay;
 
 	public void moveForward(int distance) {
 		if (player.space == 48) {
@@ -16,6 +20,7 @@ public class PlayerControl : MonoBehaviour
 			player.jump(85);
 		} else {
 			player.move(distance);
+
 		}
 
 		GameObject newTile = GameObject.Find("Tile ("+player.space+")");
@@ -46,33 +51,60 @@ public class PlayerControl : MonoBehaviour
     {
         player.init();
         player.startup();
+        PlayerMove.onClick.AddListener(MoveCheck);         //Checks if "Move" has been clicked runs PressCheck with action having a value of 1
+        PlayerDraw.onClick.AddListener(DrawCheck);   		//Checks if "Draw" has been clicked runs PressCheck with action having a value of 2
+        PlayerPlay.onClick.AddListener(PlayCheck);      //Checks if "Collect" has been clicked runs PressCheck with action having a value of 3
     }
 
-    void Update () {
-    	//this script is only useful for the given player on their turn
-    	if (Globals.currentPlayer == player) {
-    		if (Input.GetKeyDown(KeyCode.M)) {
-    			if (player.spendAp(1)) {
-	    			moveForward(1);
-    			} else {
-    				//failed to move
-    			}
-    		}
-    		if (Input.GetKeyDown(KeyCode.D)) {
-    			if (player.spendAp(2)) {
-    				player.gainResource(2,1);
-    			} else {
-    				//failed to draw a card
-    			}
-    		}
-    		if (Input.GetKeyDown(KeyCode.P)) {
-    			if (player.gainResource(2,-1)) {
-    				moveForward(2);
-    			} else {
-    				//had no cards
-    			}
-    		}
-    	}
 
+    public void MoveCheck(){
+    	Debug.Log(Globals.currentPlayer);
+    	Debug.Log(player);
+    	if (Globals.currentPlayer == player) {
+Debug.Log("MoveCheck");
+		 	if (player.spendAp(1))
+		 	{Debug.Log("MoveCheck");
+	    		moveForward(1);
+    		}
+    	 	
+    	 	else 
+    	 	{
+    			//failed to move
+   			}
+
+   		}
+   				
+    }
+
+    public void DrawCheck(){
+    	if (Globals.currentPlayer == player) {
+    	
+    		if (player.spendAp(2))
+    		{
+    			player.gainResource(2,1);
+    		}
+
+    		else 
+    		{
+    				//failed to draw a card
+    		}	
+    	}
+    }
+
+    public void PlayCheck(){
+    	if (Globals.currentPlayer == player) 
+    	{
+    		if (player.gainResource(2,-1))
+    		{
+
+    		moveForward(2);
+
+    		} 
+    			
+    		else 
+    		{
+    			//had no cards
+    		}	
+    	}
     }
 }

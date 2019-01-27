@@ -65,7 +65,7 @@ public class Globals : MonoBehaviour {
     			break;
 
     	}
-    	Globals.currentPlayer = Globals.playerList[1];
+    	Globals.currentPlayer = Globals.playerList[0];
     }
 
     void Update () {
