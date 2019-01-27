@@ -14,7 +14,7 @@ public class BurnCard : BaseCard
     	if (target.targetable) {
 			for (int i = 1; i<64; i++) {
 				if (target.inventory[i].y > 0) {
-					target.gainResource(target.inventory[i].x,-1);
+					target.gainResource((int)target.inventory[i].x,(-1));
 					return true;
 				}
 			}

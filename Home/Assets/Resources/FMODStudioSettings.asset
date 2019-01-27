@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: /Users/williamslaptop/Git/HomeGame/FmodProject/Game/ Jam.fspro
-  SourceProjectPathUnformatted: /Users/williamslaptop/Git/HomeGame/FmodProject/Game\
+  sourceProjectPath: C:\Users\Memnun\Desktop\HomeGame\FmodProject\Game Jam.fspro
+  SourceProjectPathUnformatted: C:\Users\Memnun\Desktop\HomeGame\FmodProject\Game
     Jam.fspro
-  SourceBankPathUnformatted: /Users/williamslaptop/Git/HomeGame/FmodProject/Game\Build
+  SourceBankPathUnformatted: C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0
@@ -60,5 +60,6 @@ MonoBehaviour:
   - Platform: 2
     Value: 32
   Plugins: []
-  MasterBanks: []
+  MasterBanks:
+  - Master Bank
   Banks: []

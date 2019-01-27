@@ -20,8 +20,8 @@ public class StealCard : BaseCard
     	if (target2.targetable) {
 			for (int i = 1; i<64; i++) {
 				if (target2.inventory[i].y > 0) {
-					target2.gainResource(target2.inventory[i].x,-1);
-					target1.gainResource(target2.inventory[i].x,1);
+					target2.gainResource((int)target2.inventory[i].x,-1);
+					target1.gainResource((int)target2.inventory[i].x,1);
 					return true;
 				}
 			}

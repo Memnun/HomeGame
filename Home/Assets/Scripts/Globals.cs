@@ -44,7 +44,7 @@ public class Globals : MonoBehaviour {
 
 
     void Start () {
-    	Globals.players = 2;//test
+    	Globals.players = 4;
     	switch (players) {
     		case 2:
 	    		Globals.playerList[0] = GameObject.Find("Player1").GetComponent<Player>();
@@ -66,6 +66,7 @@ public class Globals : MonoBehaviour {
 
     	}
     	Globals.currentPlayer = Globals.playerList[0];
+        Globals.currentPlayerNumber = 1;
     }
 
     void Update () {

@@ -12,7 +12,7 @@ public class PushBack : BaseCard
     //the function to call when a player uses this particular card; target single player
     public bool Activation (Player target) {
     	if (target.targetable) {
-			player.move(x);
+			target.move(x);
 			return true;
 		} return false;
     }

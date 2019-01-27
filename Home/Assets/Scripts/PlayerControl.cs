@@ -58,12 +58,10 @@ public class PlayerControl : MonoBehaviour
 
 
     public void MoveCheck(){
-    	Debug.Log(Globals.currentPlayer);
-    	Debug.Log(player);
-    	if (Globals.currentPlayer == player) {
-Debug.Log("MoveCheck");
+    	if (Globals.currentPlayer == player)
+    		{
+
 		 	if (player.spendAp(1))
-		 	{Debug.Log("MoveCheck");
 	    		moveForward(1);
     		}
     	 	
@@ -71,10 +69,7 @@ Debug.Log("MoveCheck");
     	 	{
     			//failed to move
    			}
-
-   		}
-   				
-    }
+   		}			
 
     public void DrawCheck(){
     	if (Globals.currentPlayer == player) {

@@ -9,7 +9,7 @@ public class Ringwalk : BaseCard
 
     private int x = 0;
 	
-	private void foo () {
+	private void foo (Player player) {
 		if (player.space == 48) {
 			player.jump(1);
 		} else if (player.space == 82) {
@@ -17,7 +17,7 @@ public class Ringwalk : BaseCard
 		} else if (player.space == 100) {
 			player.jump(85);
 		} else {
-			player.move(distance);
+			player.move(1);
 		}
 	}
 	
@@ -25,17 +25,17 @@ public class Ringwalk : BaseCard
     public bool Activation (Player target) {
 		if (target.space <= 48) {
     		for (int i = 0; i<7; i++) {
-				foo();
+				foo(target);
 			}
 			target.GetComponent<PlayerControl>().moveForward(1);
     	} else if (target.space <= 82) {
     		for (int i = 0; i<15; i++) {
-				foo();
+				foo(target);
 			}
 			target.GetComponent<PlayerControl>().moveForward(1);
     	} else {
     		for (int i = 0; i<23; i++) {
-				foo();
+				foo(target);
 			}
 			target.GetComponent<PlayerControl>().moveForward(1);
     	}

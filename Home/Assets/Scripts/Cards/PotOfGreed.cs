@@ -11,7 +11,7 @@ public class PotOfGreed : BaseCard
 
     //the function to call when a player uses this particular card; target single player
     public bool Activation (Player target) {
-			.gainResource(Random.Range(2,x+1),1);
+			target.gainResource(Random.Range(2,x+1),1);
 			target.gainResource(Random.Range(2,x+1),1);
 			return true;
     }
