@@ -5,7 +5,7 @@
             <value>UI_Click</value>
         </property>
         <property name="outputFormat">
-            <value>0</value>
+            <value>1</value>
         </property>
         <relationship name="folder">
             <destination>{a0c4c32d-4773-4b6b-a5be-b2222216413e}</destination>
@@ -60,7 +60,7 @@
     <object class="MarkerTrack" id="{c7a4acb0-6a84-42e8-8c93-3573d90b923b}"/>
     <object class="GroupTrack" id="{042a7733-452f-466a-a456-687432721ce7}">
         <relationship name="modules">
-            <destination>{102ae9e8-a6aa-4de9-a297-39e5b77c1213}</destination>
+            <destination>{c8801a1e-1530-4c07-9c1f-8a81611c9f6d}</destination>
         </relationship>
         <relationship name="mixerGroup">
             <destination>{f72a6ac4-54fc-4c4c-9425-b84926df489a}</destination>
@@ -68,7 +68,7 @@
     </object>
     <object class="Timeline" id="{bd2f8eef-d719-4edf-98ad-06ce6156f143}">
         <relationship name="modules">
-            <destination>{102ae9e8-a6aa-4de9-a297-39e5b77c1213}</destination>
+            <destination>{c8801a1e-1530-4c07-9c1f-8a81611c9f6d}</destination>
         </relationship>
     </object>
     <object class="EventMixerMaster" id="{e6f76caf-f3a9-43ed-a93d-3f06ba8dd751}">
@@ -88,10 +88,22 @@
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{3f2a317d-2c83-4eb1-8eb3-efa4e1d6b4c6}"/>
-    <object class="MultiSound" id="{102ae9e8-a6aa-4de9-a297-39e5b77c1213}">
-        <property name="length">
-            <value>5</value>
+    <object class="MultiSound" id="{c8801a1e-1530-4c07-9c1f-8a81611c9f6d}">
+        <property name="isAsync">
+            <value>true</value>
         </property>
+        <property name="length">
+            <value>0.5</value>
+        </property>
+        <relationship name="modulators">
+            <destination>{ffcf0964-dc9a-45fd-b4eb-8e892514ed3d}</destination>
+        </relationship>
+        <relationship name="sounds">
+            <destination>{d3f574ca-4159-4e09-a5e3-cf851a0d8fe9}</destination>
+            <destination>{185f418a-a7bd-4cf7-84b0-e0cbded38ce4}</destination>
+            <destination>{78cfa47a-fb5d-4dcc-89a6-aa4792bec2b9}</destination>
+            <destination>{fe8baf5c-82d9-4b7e-9a2d-42ce27d2c7ac}</destination>
+        </relationship>
     </object>
     <object class="EventMixerGroup" id="{f72a6ac4-54fc-4c4c-9425-b84926df489a}">
         <property name="name">
@@ -114,6 +126,34 @@
     </object>
     <object class="MixerBusPanner" id="{35dd6e54-d650-4207-a4a2-0baf9bfea87d}"/>
     <object class="MixerBusFader" id="{792bf931-025e-4af9-80dc-0eff4e5f3879}"/>
+    <object class="RandomizerModulator" id="{ffcf0964-dc9a-45fd-b4eb-8e892514ed3d}">
+        <property name="nameOfPropertyBeingModulated">
+            <value>pitch</value>
+        </property>
+        <property name="amount">
+            <value>10.5</value>
+        </property>
+    </object>
+    <object class="SingleSound" id="{d3f574ca-4159-4e09-a5e3-cf851a0d8fe9}">
+        <relationship name="audioFile">
+            <destination>{132740d2-c1cf-4c30-b81b-6b853e38c3de}</destination>
+        </relationship>
+    </object>
+    <object class="SingleSound" id="{185f418a-a7bd-4cf7-84b0-e0cbded38ce4}">
+        <relationship name="audioFile">
+            <destination>{08bd7852-5d34-4937-a297-38131fea6296}</destination>
+        </relationship>
+    </object>
+    <object class="SingleSound" id="{78cfa47a-fb5d-4dcc-89a6-aa4792bec2b9}">
+        <relationship name="audioFile">
+            <destination>{02d5240d-b97f-4b32-84c3-c153ddaf9cf4}</destination>
+        </relationship>
+    </object>
+    <object class="SingleSound" id="{fe8baf5c-82d9-4b7e-9a2d-42ce27d2c7ac}">
+        <relationship name="audioFile">
+            <destination>{5618cfaa-3a8e-4bf6-9f69-b2745f4a90fb}</destination>
+        </relationship>
+    </object>
     <object class="MixerBusEffectChain" id="{9281017b-462f-4617-9544-4b51902ab270}">
         <relationship name="effects">
             <destination>{cfd2d5da-a4eb-4e45-b21c-a6fe1b40808e}</destination>

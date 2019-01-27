@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{c9e21a21-db47-488b-a31a-cc7729447a17}">
+        <property name="assetPath">
+            <value>EFX INT Mutt Growl 42 B.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>96</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>2.4426666666666668</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{7e472eb6-3c4b-4008-ae61-1443ecf36f70}</destination>
+        </relationship>
+    </object>
+</objects>

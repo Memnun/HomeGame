@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{f24b13c0-1127-4616-966a-ec405fa1b608}">
+        <property name="assetPath">
+            <value>Amb, Forest, Stream, Quiet, MS_02.wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>96</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>167.80755208333332</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{7e472eb6-3c4b-4008-ae61-1443ecf36f70}</destination>
+        </relationship>
+    </object>
+</objects>

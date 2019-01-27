@@ -4,9 +4,6 @@
         <property name="name">
             <value>Pause Menu</value>
         </property>
-        <property name="behavior">
-            <value>1</value>
-        </property>
         <relationship name="mixer">
             <destination>{6511cccb-cc7a-4d89-99ba-80c2442e1f39}</destination>
         </relationship>
