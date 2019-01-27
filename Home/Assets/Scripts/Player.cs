@@ -11,6 +11,12 @@ public class Player : MonoBehaviour {
 	public int actionPoints;
 	public Vector2[] inventory; //inventory of items, can hold 64 unique items, and infinite count of that item
 	public bool targetable;
+	public int currentTileType;
+
+	public GameObject currentTile;
+	public float animSpeed;
+	public Vector3 currentPos;
+	public float animTime;
 
 	//instantiate the playerdata object so it doesnt break things
 	public void init () {
@@ -22,7 +28,9 @@ public class Player : MonoBehaviour {
 		}
 		actionPointsMax = 0;
 		actionPoints = 0;
+		currentTileType = 0;
 		targetable = true;
+		animSpeed = 2f;
 	}
 
 	//set the player to space 1, set the AP to Globals.startingAP
@@ -103,6 +111,10 @@ public class Player : MonoBehaviour {
 			actionPoints -= p;
 			return true;
 		}
+	}
+
+	void Update () {
+		transform.position = Vector3.Lerp(currentPos, currentTile.transform.position, (Time.time-animTime)*animSpeed);
 	}
 
 }

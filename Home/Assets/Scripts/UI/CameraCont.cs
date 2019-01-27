@@ -6,17 +6,18 @@ using UnityEngine.UI;
 public class CameraCont : MonoBehaviour
 {
     public Globals globals;
-    public Camera Player1Cam;
-    public Camera Player2Cam;
-    public Camera Player3Cam;
-    public Camera Player4Cam;
     public Image Player1Icon, Player2Icon, Player3Icon, Player4Icon;
+    public GameObject MainCamera;
+    public GameObject Player1POS, Player2POS, Player3POS, Player4POS;
 
-    
+    public Vector3 startingPos;
+    public float speed = 3;
+    public float lerpTimer;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        lerpTimer = 0f;
     }
 
     // Update is called once per frame
@@ -30,10 +31,7 @@ public class CameraCont : MonoBehaviour
             Player3Icon.gameObject.SetActive(false);
             Player4Icon.gameObject.SetActive(false);
 
-            Player1Cam.gameObject.SetActive(true);
-            Player2Cam.gameObject.SetActive(false);
-            Player3Cam.gameObject.SetActive(false);
-            Player4Cam.gameObject.SetActive(false);
+            MainCamera.transform.position = Vector3.Lerp(startingPos, Player1POS.transform.position, (Time.time-lerpTimer)*speed);
         }
 
         if (Globals.currentPlayer.name == "Player2")
@@ -44,11 +42,8 @@ public class CameraCont : MonoBehaviour
             Player3Icon.gameObject.SetActive(false);
             Player4Icon.gameObject.SetActive(false);
 
-
-            Player1Cam.gameObject.SetActive(false);
-            Player2Cam.gameObject.SetActive(true);
-            Player3Cam.gameObject.SetActive(false);
-            Player4Cam.gameObject.SetActive(false);
+            MainCamera.transform.position = Vector3.Lerp(startingPos, Player2POS.transform.position, (Time.time-lerpTimer)*speed);
+            
         } else {Debug.Log("p2 doesnt validate");}
     
         if (Globals.currentPlayer.name == "Player3")
@@ -58,11 +53,8 @@ public class CameraCont : MonoBehaviour
             Player3Icon.gameObject.SetActive(true);
             Player4Icon.gameObject.SetActive(false);
 
-
-            Player1Cam.gameObject.SetActive(false);
-            Player2Cam.gameObject.SetActive(false);
-            Player3Cam.gameObject.SetActive(true);
-            Player4Cam.gameObject.SetActive(false);
+            MainCamera.transform.position = Vector3.Lerp(startingPos, Player3POS.transform.position, (Time.time-lerpTimer)*speed);
+            
         }
     
         if (Globals.currentPlayer.name == "Player4")
@@ -72,11 +64,10 @@ public class CameraCont : MonoBehaviour
             Player3Icon.gameObject.SetActive(false);
             Player4Icon.gameObject.SetActive(true);
 
-
-            Player1Cam.gameObject.SetActive(false);
-            Player2Cam.gameObject.SetActive(false);
-            Player3Cam.gameObject.SetActive(false);
-            Player4Cam.gameObject.SetActive(true);
+            MainCamera.transform.position = Vector3.Lerp(startingPos, Player4POS.transform.position, (Time.time-lerpTimer)*speed);
+            
         }
+
     }
+
 }

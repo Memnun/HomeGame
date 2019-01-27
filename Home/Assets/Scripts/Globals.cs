@@ -79,6 +79,7 @@ public class Globals : MonoBehaviour {
     			Globals.currentPlayerNumber++;
     		}
     		Globals.currentPlayer.startTurn();
+            // GetComponent<CameraCont>().currentPos
     	}
     }
 
