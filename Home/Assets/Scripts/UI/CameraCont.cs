@@ -36,7 +36,6 @@ public class CameraCont : MonoBehaviour
 
         if (Globals.currentPlayer.name == "Player2")
         {
-            Debug.Log("p2 validates");
             Player1Icon.gameObject.SetActive(false);
             Player2Icon.gameObject.SetActive(true);
             Player3Icon.gameObject.SetActive(false);
@@ -44,7 +43,7 @@ public class CameraCont : MonoBehaviour
 
             MainCamera.transform.position = Vector3.Lerp(startingPos, Player2POS.transform.position, (Time.time-lerpTimer)*speed);
             
-        } else {Debug.Log("p2 doesnt validate");}
+        }
     
         if (Globals.currentPlayer.name == "Player3")
         {

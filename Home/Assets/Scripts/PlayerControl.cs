@@ -27,6 +27,7 @@ public class PlayerControl : MonoBehaviour
 		}
 
 		CameraCont cameracont = GameObject.Find("GameBoard").GetComponent<CameraCont>();
+		GameObject.Find("FMOD Audio").GetComponent<GameAudio>().walkInstance();
 		GameObject newTile = GameObject.Find("Tile ("+player.space+")");
 
 		cameracont.lerpTimer = Time.time;
@@ -39,6 +40,7 @@ public class PlayerControl : MonoBehaviour
 			if (newTile.GetComponent<ResourceTileBehavior>().isJumpedOn == 0) {newTile.GetComponent<ResourceTileBehavior>().isJumpedOn = 1;}
 			player.gainResource(1,1);
 			player.currentTileType = 1;
+			GameObject.Find("FMOD Audio").GetComponent<GameAudio>().getResource();
 		} else if (newTile.GetComponent<CardTileBehavior>() != null) {
 			if (newTile.GetComponent<CardTileBehavior>().isJumpedOn == 0) {newTile.GetComponent<CardTileBehavior>().isJumpedOn = 1;}
 			player.currentTileType = 2;

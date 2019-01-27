@@ -13,6 +13,9 @@ public class Player : MonoBehaviour {
 	public bool targetable;
 	public int currentTileType;
 
+	public int currentSeason;
+	private int previousSeason;
+
 	public GameObject currentTile;
 	public float animSpeed;
 	public Vector3 currentPos;
@@ -39,6 +42,8 @@ public class Player : MonoBehaviour {
 		inventory[0].x = 1;
 		actionPointsMax = Globals.startingAP;
 		actionPoints = Globals.startingAP;
+		currentSeason = 1;
+		previousSeason = 1;
 	}
 
 	//start the player turn
@@ -115,6 +120,23 @@ public class Player : MonoBehaviour {
 
 	void Update () {
 		transform.position = Vector3.Lerp(currentPos, currentTile.transform.position, (Time.time-animTime)*animSpeed);
+		if (space < 49) {
+			currentSeason = 1;
+		} else if (space < 83) {
+			currentSeason = 2;
+		} else if (space < 101) {
+			currentSeason = 3;
+		} else {
+			currentSeason = 4;
+		}
+		if (currentSeason != previousSeason) {
+			if (currentSeason == 4) {
+				GameObject.Find("FMOD Audio").GetComponent<GameAudio>().VicoTori();
+				GameObject.Find("FMOD Audio").GetComponent<GameAudio>().music.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+			} else{
+				GameObject.Find("FMOD Audio").GetComponent<GameAudio>().ringIn();
+			}
+		}
+		previousSeason = currentSeason;
 	}
-
 }

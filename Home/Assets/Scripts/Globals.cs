@@ -8,29 +8,18 @@ public class Globals : MonoBehaviour {
     /*
     general notes can go here
 
+    fox -> rabbit -> squirrel -> hedgehog
+    28-18-10
+
     materials go in the Resources folder
     tile 48: jump to 66 if you have 20, otherwise wrap to 1
     tile 82: jump to 92 if you have 80, otherwise wrap to 51
     tile 100: jump to 103 if you have 160, otherwise wrap to 85
-    itemids:
-    1-resource
-    2-gain X resources
-    3-gain X AP for this turn
-    4-jump instantly to passage
-    5-advance X spaces instantly
-    6-protect yourself from hinderances for 1 turn
-	7-steal AP
-	8-steal Resources
-	9-swap places with another player
+    unimplimented itemids:
 	10-trap a space(? how to select a specific tile)
 	11-move another player anywhere(? how to select a specific tile)
 	12-counter card(? too many edge cases)
 	13-shuffle(? hard to implement)
-	14-pot of greed
-	15-move another player back
-	16-steal a card
-	17-burn another player's card
-	18-move to opposite side of the ring
 	19-reverse turn order(? modifying things low level)
     */
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
