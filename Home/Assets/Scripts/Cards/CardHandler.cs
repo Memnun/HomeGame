@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CardHandler : MonoBehaviour
+public class CardHandler : ScriptableObject
 {
 	public List<BaseCard> cards;
     // Start is called before the first frame update
-    void Start()
+    public CardHandler()
     {
         cards = new List<BaseCard>();
 
@@ -23,12 +23,6 @@ public class CardHandler : MonoBehaviour
         cards.Add( new BaseCard(16, "Steal A Card"));
         cards.Add( new BaseCard(17, "Burn A Card"));
         cards.Add( new BaseCard(18, "Jump Across Ring"));
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void motionlessWalk (Player player) {
