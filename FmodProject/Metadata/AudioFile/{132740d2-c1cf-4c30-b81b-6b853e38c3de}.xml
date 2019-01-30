@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="AudioFile" id="{132740d2-c1cf-4c30-b81b-6b853e38c3de}">
         <property name="assetPath">
-            <value>Grabbing Paper 03.wav</value>
+            <value>SFX/Grabbing Paper 03.wav</value>
         </property>
         <property name="frequencyInKHz">
             <value>48</value>

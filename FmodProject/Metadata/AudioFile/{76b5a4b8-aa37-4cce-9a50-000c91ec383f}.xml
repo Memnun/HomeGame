@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="AudioFile" id="{76b5a4b8-aa37-4cce-9a50-000c91ec383f}">
         <property name="assetPath">
-            <value>Dog Growl Medium 2.ogg</value>
+            <value>SFX/Dog Growl Medium 2.ogg</value>
         </property>
         <property name="frequencyInKHz">
             <value>48</value>

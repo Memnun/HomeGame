@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="AudioFile" id="{a474349e-38e3-451f-baf4-dfbfb87cd1c0}">
         <property name="assetPath">
-            <value>Card_Flip.wav</value>
+            <value>SFX/Card_Flip.wav</value>
         </property>
         <property name="frequencyInKHz">
             <value>44.0999985</value>

@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="AudioFile" id="{fec049eb-3d72-4903-a1a0-3a4da29de948}">
         <property name="assetPath">
-            <value>Celery,Bite,Crunch,Slow,Bone,Break,Stick,Creak,Various07.wav</value>
+            <value>SFX/Celery,Bite,Crunch,Slow,Bone,Break,Stick,Creak,Various07.wav</value>
         </property>
         <property name="frequencyInKHz">
             <value>96</value>

@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="AudioFile" id="{bd626e4d-5282-45cd-a463-08b62c2d81d3}">
         <property name="assetPath">
-            <value>bird_small_songbird_call_chirp_02.wav</value>
+            <value>SFX/bird_small_songbird_call_chirp_02.wav</value>
         </property>
         <property name="frequencyInKHz">
             <value>96</value>

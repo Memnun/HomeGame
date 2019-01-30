@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="AudioFile" id="{32612fee-8ea0-4655-b7a4-a0a7a40d9360}">
         <property name="assetPath">
-            <value>TCF02_77 SingleWolfBarkin.L.wav</value>
+            <value>SFX/TCF02_77 SingleWolfBarkin.L.wav</value>
         </property>
         <property name="isStreaming">
             <value>true</value>

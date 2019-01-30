@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="AudioFile" id="{861ef919-f124-499a-aa4c-081266e25802}">
         <property name="assetPath">
-            <value>Shuffling Paper 4.wav</value>
+            <value>SFX/Shuffling Paper 4.wav</value>
         </property>
         <property name="frequencyInKHz">
             <value>96</value>

@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="AudioFile" id="{de265f0c-e4ec-46db-b922-809ee869490b}">
         <property name="assetPath">
-            <value>magic_spell_book_page_flips_01.wav</value>
+            <value>SFX/magic_spell_book_page_flips_01.wav</value>
         </property>
         <property name="frequencyInKHz">
             <value>96</value>

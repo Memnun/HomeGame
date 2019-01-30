@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="AudioFile" id="{c9e21a21-db47-488b-a31a-cc7729447a17}">
         <property name="assetPath">
-            <value>EFX INT Mutt Growl 42 B.wav</value>
+            <value>SFX/EFX INT Mutt Growl 42 B.wav</value>
         </property>
         <property name="frequencyInKHz">
             <value>96</value>

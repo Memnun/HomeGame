@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="AudioFile" id="{1055c11e-6b78-43b0-929c-160a2bf510e5}">
         <property name="assetPath">
-            <value>WINTER Forest wind moderate with trees rustling and barks creaking, North Laurentian Woods, Canada_LOOP.LR.wav</value>
+            <value>Ambience/WINTER Forest wind moderate with trees rustling and barks creaking, North Laurentian Woods, Canada_LOOP.LR.wav</value>
         </property>
         <property name="isStreaming">
             <value>true</value>

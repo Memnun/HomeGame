@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="AudioFile" id="{eafe6f50-6593-4c26-bf5b-4f921ab66aba}">
         <property name="assetPath">
-            <value>Ring Transition 1.wav</value>
+            <value>SFX/Ring Transition 1.wav</value>
         </property>
         <property name="frequencyInKHz">
             <value>44.0999985</value>

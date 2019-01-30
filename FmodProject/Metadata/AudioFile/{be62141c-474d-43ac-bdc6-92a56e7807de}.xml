@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="AudioFile" id="{be62141c-474d-43ac-bdc6-92a56e7807de}">
         <property name="assetPath">
-            <value>BiteApple_BW.15732.wav</value>
+            <value>SFX/BiteApple_BW.15732.wav</value>
         </property>
         <property name="frequencyInKHz">
             <value>96</value>

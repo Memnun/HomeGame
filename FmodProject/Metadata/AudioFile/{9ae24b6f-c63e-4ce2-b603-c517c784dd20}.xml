@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="AudioFile" id="{9ae24b6f-c63e-4ce2-b603-c517c784dd20}">
         <property name="assetPath">
-            <value>BOOK-PAPERBACK_GEN-HDF-04496.L.wav</value>
+            <value>SFX/BOOK-PAPERBACK_GEN-HDF-04496.L.wav</value>
         </property>
         <property name="frequencyInKHz">
             <value>48</value>
