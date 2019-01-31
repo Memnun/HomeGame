@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.01.10.00">
-    <object class="AudioFile" id="{0ad184e9-bacb-4f2b-b4fd-26dcf83d0fe9}">
+    <object class="AudioFile" id="{20061330-b8a2-4ef9-a66f-712e90b3d029}">
         <property name="assetPath">
             <value>Music/Squirrels V2.wav</value>
         </property>
