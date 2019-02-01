@@ -14,10 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: C:\Users\Memnun\Desktop\HomeGame\FmodProject\Game Jam.fspro
-  SourceProjectPathUnformatted: C:\Users\Memnun\Desktop\HomeGame\FmodProject\Game
-    Jam.fspro
-  SourceBankPathUnformatted: C:\Users\Memnun\Desktop\HomeGame\FmodProject\Build
+  sourceProjectPath: Assets/FmodProject/Game Jam.fspro
+  SourceProjectPathUnformatted: Assets/FmodProject/Game Jam.fspro
+  SourceBankPathUnformatted: Assets/FmodProject/Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0
@@ -28,7 +27,7 @@ MonoBehaviour:
     Value: 3
   SampleRateSettings:
   - Platform: 1
-    Value: 48000
+    Value: 44100
   - Platform: 2
     Value: 0
   LiveUpdateSettings:
