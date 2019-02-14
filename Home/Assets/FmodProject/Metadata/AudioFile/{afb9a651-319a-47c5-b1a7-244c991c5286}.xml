@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.01.10.00">
-    <object class="AudioFile" id="{62ec473b-dc70-42e5-9a3b-78358aa441f3}">
+    <object class="AudioFile" id="{afb9a651-319a-47c5-b1a7-244c991c5286}">
         <property name="assetPath">
-            <value>Music/Rabbits V2.wav</value>
-        </property>
-        <property name="isStreaming">
-            <value>true</value>
+            <value>SFX/Wind_Chime_4.wav</value>
         </property>
         <property name="frequencyInKHz">
             <value>44.0999985</value>
@@ -14,7 +11,7 @@
             <value>2</value>
         </property>
         <property name="length">
-            <value>49.230770975056693</value>
+            <value>4.6153968253968252</value>
         </property>
         <relationship name="masterAssetFolder">
             <destination>{7e472eb6-3c4b-4008-ae61-1443ecf36f70}</destination>

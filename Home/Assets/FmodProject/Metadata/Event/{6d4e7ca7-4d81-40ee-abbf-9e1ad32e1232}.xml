@@ -24,6 +24,7 @@
         </relationship>
         <relationship name="markerTracks">
             <destination>{99df0fc2-56cc-4933-864e-1a0efcace29d}</destination>
+            <destination>{d5856d7f-5ba8-43a3-af30-c31dd5066766}</destination>
         </relationship>
         <relationship name="groupTracks">
             <destination>{73325175-e372-43f2-81ec-cf8b4e3b40c8}</destination>
@@ -58,6 +59,7 @@
     </object>
     <object class="EventAutomatableProperties" id="{47e01f90-f8e4-47da-95ff-057a3266aff0}"/>
     <object class="MarkerTrack" id="{99df0fc2-56cc-4933-864e-1a0efcace29d}"/>
+    <object class="MarkerTrack" id="{d5856d7f-5ba8-43a3-af30-c31dd5066766}"/>
     <object class="GroupTrack" id="{73325175-e372-43f2-81ec-cf8b4e3b40c8}">
         <relationship name="modules">
             <destination>{fce52817-f4bd-4c04-a065-861d1a470979}</destination>
@@ -71,8 +73,8 @@
             <destination>{fce52817-f4bd-4c04-a065-861d1a470979}</destination>
         </relationship>
         <relationship name="markers">
-            <destination>{ec6d065d-c6c9-4384-bbcb-e70840887520}</destination>
             <destination>{727248bd-32bd-4d01-b8a7-802634de4172}</destination>
+            <destination>{5acf761d-2aeb-4381-9824-cf85596ee98d}</destination>
         </relationship>
     </object>
     <object class="EventMixerMaster" id="{363e018b-ce57-4c79-b0e9-6e2bb32b0fdf}">
@@ -125,12 +127,12 @@
             <destination>{363e018b-ce57-4c79-b0e9-6e2bb32b0fdf}</destination>
         </relationship>
     </object>
-    <object class="LoopRegion" id="{ec6d065d-c6c9-4384-bbcb-e70840887520}">
+    <object class="TempoMarker" id="{727248bd-32bd-4d01-b8a7-802634de4172}">
         <property name="position">
             <value>0</value>
         </property>
-        <property name="length">
-            <value>0.5</value>
+        <property name="tempo">
+            <value>117</value>
         </property>
         <relationship name="timeline">
             <destination>{d6eab4cd-01b6-404d-8904-676a47bad660}</destination>
@@ -139,15 +141,18 @@
             <destination>{99df0fc2-56cc-4933-864e-1a0efcace29d}</destination>
         </relationship>
     </object>
-    <object class="TempoMarker" id="{727248bd-32bd-4d01-b8a7-802634de4172}">
+    <object class="LoopRegion" id="{5acf761d-2aeb-4381-9824-cf85596ee98d}">
         <property name="position">
             <value>0</value>
+        </property>
+        <property name="length">
+            <value>0.51282051282051277</value>
         </property>
         <relationship name="timeline">
             <destination>{d6eab4cd-01b6-404d-8904-676a47bad660}</destination>
         </relationship>
         <relationship name="markerTrack">
-            <destination>{99df0fc2-56cc-4933-864e-1a0efcace29d}</destination>
+            <destination>{d5856d7f-5ba8-43a3-af30-c31dd5066766}</destination>
         </relationship>
     </object>
     <object class="MixerBusEffectChain" id="{dbe741cb-b024-4a85-af71-6accb6e11fa3}">
@@ -183,6 +188,8 @@
     </object>
     <object class="MixerBusEffectChain" id="{dc7742ad-50c5-4da9-94b9-35c8ae892d4f}">
         <relationship name="effects">
+            <destination>{7ccf1f8f-f0f1-4ca9-88e6-7c265289b3e2}</destination>
+            <destination>{27facba3-7e71-4216-aec7-516cf6ba194f}</destination>
             <destination>{95267193-24ac-49b9-a320-428401529d36}</destination>
         </relationship>
     </object>
@@ -199,5 +206,24 @@
         </relationship>
     </object>
     <object class="MixerBusFader" id="{f33d178b-4c08-44ee-9c01-d3b692eca2da}"/>
+    <object class="ThreeEQEffect" id="{7ccf1f8f-f0f1-4ca9-88e6-7c265289b3e2}">
+        <property name="lowGain">
+            <value>-29</value>
+        </property>
+        <property name="highGain">
+            <value>-7.5</value>
+        </property>
+        <property name="lowCrossover">
+            <value>1550</value>
+        </property>
+        <property name="highCrossover">
+            <value>2600</value>
+        </property>
+    </object>
+    <object class="GainEffect" id="{27facba3-7e71-4216-aec7-516cf6ba194f}">
+        <property name="gain">
+            <value>10</value>
+        </property>
+    </object>
     <object class="MixerBusFader" id="{95267193-24ac-49b9-a320-428401529d36}"/>
 </objects>

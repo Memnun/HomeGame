@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.01.10.00">
-    <object class="AudioFile" id="{20061330-b8a2-4ef9-a66f-712e90b3d029}">
+    <object class="AudioFile" id="{83244e55-886f-4ce2-8518-66518ff769b3}">
         <property name="assetPath">
-            <value>Music/Squirrels V2.wav</value>
+            <value>Music/Foxes.wav</value>
         </property>
         <property name="isStreaming">
             <value>true</value>
@@ -14,7 +14,7 @@
             <value>2</value>
         </property>
         <property name="length">
-            <value>53.333333333333336</value>
+            <value>92.564104308390029</value>
         </property>
         <relationship name="masterAssetFolder">
             <destination>{7e472eb6-3c4b-4008-ae61-1443ecf36f70}</destination>

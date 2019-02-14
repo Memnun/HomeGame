@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{2aa5a520-e99b-454d-8810-a29c24cd4db0}">
+        <property name="assetPath">
+            <value>Music/Rabbits.wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>94.358979591836729</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{7e472eb6-3c4b-4008-ae61-1443ecf36f70}</destination>
+        </relationship>
+    </object>
+</objects>
