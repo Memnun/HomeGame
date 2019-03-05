@@ -24,6 +24,11 @@ public class Player : MonoBehaviour {
 
 	public void init () {
 		cards = new int[3];
+		space = 1;
+	}
+
+	public bool moveAlongRing (int distance) {
+		//
 	}
 
 }
