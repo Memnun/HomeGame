@@ -16,7 +16,7 @@ public class ApDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    	switch (GameObject.Find(Globals.currentPlayer.name).GetComponent<Player>().actionPoints) {
+    	switch (GameObject.Find(Globals.Instance.playerList[Globals.Instance.currentPlayer].name).GetComponent<Player>().actionPoints) {
     		case 1:
     			ApIcon.sprite = Ap1;
     			break;

@@ -21,19 +21,19 @@ public class Players : MonoBehaviour
     void TwoPeople()
     {
     	PlayerNum = 2;
-    	Globals.players = PlayerNum;
+    	Globals.Instance.players = PlayerNum;
     }
     
     void ThreePeople()
     {
     	PlayerNum = 3;
-    	Globals.players = PlayerNum;
+    	Globals.Instance.players = PlayerNum;
     }
     
     void FourPeople()
     {
     	PlayerNum = 4;
-    	Globals.players = PlayerNum;
+    	Globals.Instance.players = PlayerNum;
     }
 
 }

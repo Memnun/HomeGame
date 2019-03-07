@@ -23,8 +23,8 @@ public class GameAudio : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ambiance.setParameterValue("Season", Globals.currentPlayer.currentSeason);
-        music.setParameterValue("Turn", Globals.currentPlayerNumber-1);
+        ambiance.setParameterValue("Season", Globals.Instance.playerList[Globals.Instance.currentPlayer].currentSeason);
+        music.setParameterValue("Turn", Globals.Instance.currentPlayer-1);
     }
     void walkstop() {
     	walk.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
