@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.01.10.00">
-    <object class="AudioFile" id="{1813cf90-0d2a-4c2a-ab28-0af82e6a9fa7}">
-        <property name="assetPath">
-            <value>Music/Theme V2.wav</value>
-        </property>
-        <property name="isStreaming">
-            <value>true</value>
-        </property>
-        <property name="frequencyInKHz">
-            <value>44.0999985</value>
-        </property>
-        <property name="channelCount">
-            <value>2</value>
-        </property>
-        <property name="length">
-            <value>30.927823129251699</value>
-        </property>
-        <relationship name="masterAssetFolder">
-            <destination>{7e472eb6-3c4b-4008-ae61-1443ecf36f70}</destination>
-        </relationship>
-    </object>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{1813cf90-0d2a-4c2a-ab28-0af82e6a9fa7}">
+		<property name="assetPath">
+			<value>Music/Theme V2.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>30.927823129251699</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{7e472eb6-3c4b-4008-ae61-1443ecf36f70}</destination>
+		</relationship>
+	</object>
 </objects>

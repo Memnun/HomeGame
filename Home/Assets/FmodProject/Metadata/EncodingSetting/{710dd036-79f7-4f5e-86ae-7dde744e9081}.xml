@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.01.10.00">
-    <object class="EncodingSetting" id="{710dd036-79f7-4f5e-86ae-7dde744e9081}">
-        <property name="encodingFormat">
-            <value>3</value>
-        </property>
-        <property name="quality">
-            <value>37</value>
-        </property>
-        <property name="loadingMode">
-            <value>2</value>
-        </property>
-        <relationship name="platform">
-            <destination>{d252c1b6-13e3-4ca1-8dd5-3f3ecd87363f}</destination>
-        </relationship>
-        <relationship name="encodable">
-            <destination>{2aa5a520-e99b-454d-8810-a29c24cd4db0}</destination>
-        </relationship>
-    </object>
+<objects serializationModel="Studio.02.00.00">
+	<object class="EncodingSetting" id="{710dd036-79f7-4f5e-86ae-7dde744e9081}">
+		<property name="encodingFormat">
+			<value>3</value>
+		</property>
+		<property name="quality">
+			<value>37</value>
+		</property>
+		<property name="loadingMode">
+			<value>2</value>
+		</property>
+		<relationship name="platform">
+			<destination>{d252c1b6-13e3-4ca1-8dd5-3f3ecd87363f}</destination>
+		</relationship>
+		<relationship name="encodable">
+			<destination>{2aa5a520-e99b-454d-8810-a29c24cd4db0}</destination>
+		</relationship>
+	</object>
 </objects>

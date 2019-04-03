@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.01.10.00">
-    <object class="ParameterPreset" id="{a2fbc5e3-9096-47ff-becd-1478005e533a}">
-        <property name="name">
-            <value>Season</value>
-        </property>
-        <relationship name="folder">
-            <destination>{1ad590a3-46b3-4117-8f43-51366fe0730e}</destination>
-        </relationship>
-        <relationship name="parameter">
-            <destination>{883024f4-901d-4897-ae05-defd7e18f48f}</destination>
-        </relationship>
-    </object>
-    <object class="GameParameter" id="{883024f4-901d-4897-ae05-defd7e18f48f}">
-        <property name="minimum">
-            <value>1</value>
-        </property>
-        <property name="maximum">
-            <value>3</value>
-        </property>
-        <property name="initialValue">
-            <value>1</value>
-        </property>
-        <property name="seekSpeed">
-            <value>3.2000000476837158</value>
-        </property>
-    </object>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{a2fbc5e3-9096-47ff-becd-1478005e533a}">
+		<property name="name">
+			<value>Season</value>
+		</property>
+		<relationship name="folder">
+			<destination>{1ad590a3-46b3-4117-8f43-51366fe0730e}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{883024f4-901d-4897-ae05-defd7e18f48f}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{883024f4-901d-4897-ae05-defd7e18f48f}">
+		<property name="minimum">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="initialValue">
+			<value>1</value>
+		</property>
+		<property name="seekSpeed">
+			<value>3.2000000476837158</value>
+		</property>
+	</object>
 </objects>
