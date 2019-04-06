@@ -126,8 +126,8 @@ public class Player : MonoBehaviour {
 	}
 
 	public bool playACard (int position, GameObject target) {
-		if (card[position] != 0) {
-		Globals.Instance.cardhandler.PlayCard(cards[position], this, target);
+		if (cards[position] != 0) {
+		Globals.Instance.cardhandler.PlayCard(cards[position], target);
 		return true;
 		}
 		return false;
