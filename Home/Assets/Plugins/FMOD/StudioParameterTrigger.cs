@@ -12,11 +12,32 @@ namespace FMODUnity
 
     [AddComponentMenu("FMOD Studio/FMOD Studio Parameter Trigger")]
     public class StudioParameterTrigger: MonoBehaviour
-    {                        
+    {
         public EmitterRef[] Emitters;
         public EmitterGameEvent TriggerEvent;
         public string CollisionTag;
-        
+
+        void Awake()
+        {
+            for (int i = 0; i < Emitters.Length; i++)
+            {
+                var emitterRef = Emitters[i];
+                if (emitterRef.Target != null && !string.IsNullOrEmpty(emitterRef.Target.Event))
+                {
+                    FMOD.Studio.EventDescription eventDesc = FMODUnity.RuntimeManager.GetEventDescription(emitterRef.Target.Event);
+                    if (eventDesc.isValid())
+                    {
+                        for (int j = 0; j < Emitters[i].Params.Length; j++)
+                        {
+                            FMOD.Studio.PARAMETER_DESCRIPTION param;
+                            eventDesc.getParameterDescriptionByName(emitterRef.Target.Params[j].Name, out param);
+                            emitterRef.Params[j].ID = param.id;
+                        }
+                    }
+                }
+            }
+        }
+
         void Start()
         {
             HandleGameEvent(EmitterGameEvent.ObjectStart);
@@ -39,7 +60,7 @@ namespace FMODUnity
 
         void OnTriggerEnter(Collider other)
         {
-            if (String.IsNullOrEmpty(CollisionTag) || other.CompareTag(CollisionTag))
+            if (string.IsNullOrEmpty(CollisionTag) || other.CompareTag(CollisionTag))
             {
                 HandleGameEvent(EmitterGameEvent.TriggerEnter);
             }
@@ -47,7 +68,7 @@ namespace FMODUnity
 
         void OnTriggerExit(Collider other)
         {
-            if (String.IsNullOrEmpty(CollisionTag) || other.CompareTag(CollisionTag))
+            if (string.IsNullOrEmpty(CollisionTag) || other.CompareTag(CollisionTag))
             {
                 HandleGameEvent(EmitterGameEvent.TriggerExit);
             }
@@ -55,7 +76,7 @@ namespace FMODUnity
 
         void OnTriggerEnter2D(Collider2D other)
         {
-            if (String.IsNullOrEmpty(CollisionTag) || other.CompareTag(CollisionTag))
+            if (string.IsNullOrEmpty(CollisionTag) || other.CompareTag(CollisionTag))
             {
                 HandleGameEvent(EmitterGameEvent.TriggerEnter2D);
             }
@@ -63,7 +84,7 @@ namespace FMODUnity
 
         void OnTriggerExit2D(Collider2D other)
         {
-            if (String.IsNullOrEmpty(CollisionTag) || other.CompareTag(CollisionTag))
+            if (string.IsNullOrEmpty(CollisionTag) || other.CompareTag(CollisionTag))
             {
                 HandleGameEvent(EmitterGameEvent.TriggerExit2D);
             }
@@ -102,11 +123,11 @@ namespace FMODUnity
             for (int i = 0; i < Emitters.Length; i++)
             {
                 var emitterRef = Emitters[i];
-                if (emitterRef.Target != null)
+                if (emitterRef.Target != null && emitterRef.Target.EventInstance.isValid())
                 {
                     for (int j = 0; j < Emitters[i].Params.Length; j++)
                     {
-                        emitterRef.Target.SetParameter(Emitters[i].Params[j].Name, Emitters[i].Params[j].Value);
+                        emitterRef.Target.EventInstance.setParameterByID(Emitters[i].Params[j].ID, Emitters[i].Params[j].Value);
                     }
                 }
             }

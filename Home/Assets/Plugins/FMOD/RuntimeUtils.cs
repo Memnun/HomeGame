@@ -12,7 +12,7 @@ namespace FMODUnity
         public string Path;
         public EventNotFoundException(string path)
             : base("[FMOD] Event not found '" + path + "'")
-        {           
+        {
             Path = path;
         }
 
@@ -28,7 +28,7 @@ namespace FMODUnity
         public string Path;
         public BusNotFoundException(string path)
             : base("[FMOD] Bus not found '" + path + "'")
-        {           
+        {
             Path = path;
         }
     }
@@ -49,13 +49,13 @@ namespace FMODUnity
         public FMOD.RESULT Result;
 
         public BankLoadException(string path, FMOD.RESULT result)
-            : base(String.Format("[FMOD] Could not load bank '{0}' : {1} : {2}", path, result.ToString(), FMOD.Error.String(result)))
+            : base(string.Format("[FMOD] Could not load bank '{0}' : {1} : {2}", path, result.ToString(), FMOD.Error.String(result)))
         {
             Path = path;
             Result = result;
         }
         public BankLoadException(string path, string error)
-            : base(String.Format("[FMOD] Could not load bank '{0}' : {1}", path, error))
+            : base(string.Format("[FMOD] Could not load bank '{0}' : {1}", path, error))
         {
             Path = path;
             Result = FMOD.RESULT.ERR_INTERNAL;
@@ -68,7 +68,7 @@ namespace FMODUnity
         public string Location;
 
         public SystemNotInitializedException(FMOD.RESULT result, string location)
-            : base(String.Format("[FMOD] Initialization failed : {2} : {0} : {1}", result.ToString(), FMOD.Error.String(result), location))
+            : base(string.Format("[FMOD] Initialization failed : {2} : {0} : {1}", result.ToString(), FMOD.Error.String(result), location))
         {
             Result = result;
             Location = location;
@@ -80,7 +80,7 @@ namespace FMODUnity
         }
     }
 
-    public enum EmitterGameEvent
+    public enum EmitterGameEvent : int
     {
         None,
         ObjectStart,
@@ -97,7 +97,7 @@ namespace FMODUnity
         ObjectDisable
     }
 
-    public enum LoaderGameEvent
+    public enum LoaderGameEvent : int
     {
         None,
         ObjectStart,
@@ -287,16 +287,12 @@ namespace FMODUnity
             return FMODPlatform.PS4;
             #elif UNITY_XBOXONE
             return FMODPlatform.XboxOne;
-            #elif UNITY_PSP2
-            return FMODPlatform.PSVita;
-            #elif (!UNITY_5_0 && !UNITY_5_1) && UNITY_WIIU
-            return FMODPlatform.WiiU;
             #elif UNITY_WSA_10_0
             return FMODPlatform.UWP;
             #elif UNITY_SWITCH
             return FMODPlatform.Switch;
             #elif UNITY_WEBGL
-            return FMODPlatform.WebGL;            
+            return FMODPlatform.WebGL;
             #endif
         }
 
@@ -334,11 +330,11 @@ namespace FMODUnity
 
             if (System.IO.Path.GetExtension(bankName) != BankExtension)
             {
-                return String.Format("{0}/{1}.bank", bankFolder, bankName);
+                return string.Format("{0}/{1}.bank", bankFolder, bankName);
             }
             else
             {
-                return String.Format("{0}/{1}", bankFolder, bankName);
+                return string.Format("{0}/{1}", bankFolder, bankName);
             }
         }
 
@@ -364,12 +360,8 @@ namespace FMODUnity
                 string pluginFolder = Application.dataPath + "/Plugins/";
             #elif UNITY_STANDALONE_LINUX
                 string pluginFolder = Application.dataPath + ((IntPtr.Size == 8) ? "/Plugins/x86_64/" : "/Plugins/x86/");
-            #elif UNITY_WSA
+            #elif UNITY_WSA || UNITY_ANDROID
                 string pluginFolder = "";
-            #elif UNITY_ANDROID
-                var dirInfo = new global::System.IO.DirectoryInfo(Application.persistentDataPath);
-                string packageName = dirInfo.Parent.Name;
-                string pluginFolder = "/data/data/" + packageName + "/lib/";
             #else
                 string pluginFileName = "";
                 string pluginFolder = "";
@@ -385,7 +377,7 @@ namespace FMODUnity
             AndroidJavaClass jSystem = new AndroidJavaClass("java.lang.System");
             jSystem.CallStatic("loadLibrary", FMOD.VERSION.dll);
             jSystem.CallStatic("loadLibrary", FMOD.Studio.STUDIO_VERSION.dll);
-            
+
             #endif
 
             // Call a function in fmod.dll to make sure it's loaded before fmodstudio.dll
@@ -393,7 +385,7 @@ namespace FMODUnity
             FMOD.Memory.GetStats(out temp1, out temp2);
 
             Guid temp3;
-            FMOD.Studio.Util.ParseID("", out temp3);
+            FMOD.Studio.Util.parseID("", out temp3);
         }
 
         #if UNITY_EDITOR
@@ -407,49 +399,21 @@ namespace FMODUnity
                     return FMODPlatform.iOS;
                 case BuildTarget.PS4:
                     return FMODPlatform.PS4;
-                case BuildTarget.PSP2:
-                    return FMODPlatform.PSVita;
                 case BuildTarget.StandaloneLinux:
                 case BuildTarget.StandaloneLinux64:
                 case BuildTarget.StandaloneLinuxUniversal:
                     return FMODPlatform.Linux;
-                #if UNITY_2017_3_OR_NEWER
                 case BuildTarget.StandaloneOSX:
-                #else
-                case BuildTarget.StandaloneOSXIntel:
-                case BuildTarget.StandaloneOSXIntel64:
-                case BuildTarget.StandaloneOSXUniversal:
-                #endif
                     return FMODPlatform.Mac;
                 case BuildTarget.StandaloneWindows:
                 case BuildTarget.StandaloneWindows64:
                     return FMODPlatform.Windows;
                 case BuildTarget.XboxOne:
                     return FMODPlatform.XboxOne;
-                #if (UNITY_5_2 || UNITY_5_3_OR_NEWER) && !UNITY_2018_1_OR_NEWER
-                case BuildTarget.WiiU:
-                    return FMODPlatform.WiiU;
-                #endif
                 case BuildTarget.WSAPlayer:
-                #if UNITY_2017_1_OR_NEWER
                     return FMODPlatform.UWP;
-                #elif UNITY_5_2 || UNITY_5_3_OR_NEWER
-                    if (EditorUserBuildSettings.wsaSDK == WSASDK.UWP)
-                    {
-                        return FMODPlatform.UWP;
-                    }
-                    return FMODPlatform.None;
-                #else
-                    if (EditorUserBuildSettings.wsaSDK == WSASDK.PhoneSDK81)
-                    { 
-                        return FMODPlatform.WindowsPhone;
-                    }
-                    return FMODPlatform.None;
-                #endif
-                #if UNITY_5_3_OR_NEWER
                 case BuildTarget.tvOS:
                     return FMODPlatform.AppleTV;
-                #endif
                 #if UNITY_SWITCH
                 case BuildTarget.Switch:
                     return FMODPlatform.Switch;

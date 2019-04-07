@@ -1,6 +1,4 @@
-﻿#if UNITY_2017_1_OR_NEWER
-
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
 
@@ -45,7 +43,7 @@ public class FMODEventMixerBehaviour : PlayableBehaviour
          * Check IsQuitting to avoid accessing the RuntimeManager during the Play-In-Editor to Editor transition.
          */
         bool playing = playable.GetGraph().IsPlaying();
-        if (!playing || FMODUnity.RuntimeManager.IsQuitting())
+        if (!playing)
         {
             return;
         }
@@ -68,5 +66,3 @@ public class FMODEventMixerBehaviour : PlayableBehaviour
         }
     }
 }
-
-#endif //UNITY_2017_1_OR_NEWER

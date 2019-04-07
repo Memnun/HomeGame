@@ -35,25 +35,6 @@ extern "C" uint32_t FmodUnityNativePluginInit(FMOD_SYSTEM* system)
     }
     */
 
-    /* Uncomment this next section to use the GoogleVR plugin on iOS */
-    /*
-    result = FMOD5_System_RegisterDSP(system, FMOD_Google_GVRListener_GetDSPDescription(), nullptr);
-    if (result != 0)
-    {
-      return result;
-    }
-    result = FMOD5_System_RegisterDSP(system, FMOD_Google_GVRSoundfield_GetDSPDescription(), nullptr);
-    if (result != 0)
-    {
-      return result;
-    }
-    result = FMOD5_System_RegisterDSP(system, FMOD_Google_GVRSource_GetDSPDescription(), nullptr);
-    if (result != 0)
-    {
-      return result;
-    }
-    */
-
     /* Uncomment this next section to use the Resonance Audio plugin on iOS */
     /*
     result = FMOD5_System_RegisterDSP(system, FMOD_ResonanceAudioListener_GetDSPDescription(), nullptr);

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Collections;
 using UnityEditor;
 using System.IO;
 using System.Text;
@@ -77,7 +76,7 @@ namespace FMODUnity
             var settings = Settings.Instance;
             if (settings.HasSourceProject)
             {
-                if (String.IsNullOrEmpty(settings.SourceProjectPath))
+                if (string.IsNullOrEmpty(settings.SourceProjectPath))
                 {
                     valid = false;
                     reason = "FMOD Studio Project path not set";
@@ -160,7 +159,7 @@ namespace FMODUnity
             }
             return new string[0];
         }
-        
+
         static string VerionNumberToString(uint version)
         {
             uint major = (version & 0x00FF0000) >> 16;
@@ -173,15 +172,11 @@ namespace FMODUnity
         static EditorUtils()
         {
             EditorApplication.update += Update;
-            #if UNITY_2017_2_OR_NEWER
+
             EditorApplication.playModeStateChanged += HandleOnPlayModeChanged;
             EditorApplication.pauseStateChanged += HandleOnPausedModeChanged;
-            #else
-            EditorApplication.playmodeStateChanged += HandleOnPlayModeChanged;
-            #endif
         }
 
-        #if UNITY_2017_2_OR_NEWER
         static void HandleOnPausedModeChanged(PauseState state)
         {
             if (RuntimeManager.IsInitialized && RuntimeManager.HasBanksLoaded)
@@ -200,27 +195,6 @@ namespace FMODUnity
                 DestroySystem();
             }
         }
-        #else
-        static void HandleOnPlayModeChanged()
-        {
-            // Entering Play Mode will cause scripts to reload, losing all state
-            // This is the last chance to clean up FMOD and avoid a leak.
-            if (EditorApplication.isPlayingOrWillChangePlaymode &&
-                !EditorApplication.isPaused)
-            {
-                DestroySystem();
-            }
-            
-            if (RuntimeManager.IsInitialized && RuntimeManager.HasBanksLoaded)
-            {
-                if (EditorApplication.isPlayingOrWillChangePlaymode)
-                {
-                    RuntimeManager.GetBus("bus:/").setPaused(EditorApplication.isPaused);
-                    RuntimeManager.StudioSystem.update();
-                }
-            }
-        }
-        #endif
 
         static void Update()
         {
@@ -275,7 +249,7 @@ namespace FMODUnity
             CheckResult(FMOD.Studio.System.create(out system));
 
             FMOD.System lowlevel;
-            CheckResult(system.getLowLevelSystem(out lowlevel));
+            CheckResult(system.getCoreSystem(out lowlevel));
 
             // Use play-in-editor speaker mode for event browser preview and metering
             lowlevel.setSoftwareFormat(0, (FMOD.SPEAKERMODE)Settings.Instance.GetSpeakerMode(FMODPlatform.Default),0 );
@@ -291,7 +265,7 @@ namespace FMODUnity
 
         public static void UpdateParamsOnEmitter(SerializedObject serializedObject, string path)
         {
-            if (String.IsNullOrEmpty(path) || EventManager.EventFromPath(path) == null)
+            if (string.IsNullOrEmpty(path) || EventManager.EventFromPath(path) == null)
             {
                 return;
             }
@@ -311,7 +285,7 @@ namespace FMODUnity
             }
             serializedObject.Update();
         }
-        
+
         private static void UpdateParamsOnEmitter(UnityEngine.Object obj, EditorEventRef eventRef)
         {
             var emitter = obj as StudioEventEmitter;
@@ -348,51 +322,168 @@ namespace FMODUnity
         [MenuItem("FMOD/Help/Integration Manual", priority = 3)]
         static void OnlineManual()
         {
-            Application.OpenURL("http://www.fmod.org/documentation/#content/generated/engine_new_unity/overview.html");
+            Application.OpenURL("https://fmod.com/resources/documentation-unity");
         }
 
         [MenuItem("FMOD/Help/API Documentation", priority = 4)]
         static void OnlineAPIDocs()
         {
-            Application.OpenURL("http://www.fmod.org/documentation/#content/generated/studio_api.html");
+            Application.OpenURL("https://fmod.com/resources/documentation-api");
         }
 
         [MenuItem("FMOD/Help/Support Forum", priority = 5)]
         static void OnlineQA()
         {
-            Application.OpenURL("http://www.fmod.org/questions");
+            Application.OpenURL("https://qa.fmod.com/");
         }
 
         [MenuItem("FMOD/Help/Revision History", priority = 6)]
         static void OnlineRevisions()
         {
-            Application.OpenURL("http://www.fmod.org/documentation/#content/generated/common/revision.html");
+            Application.OpenURL("https://fmod.com/resources/documentation-api?version=2.0&page=welcome-revision-history.html");
         }
 
         [MenuItem("FMOD/About Integration", priority = 7)]
         public static void About()
         {
             FMOD.System lowlevel;
-            CheckResult(System.getLowLevelSystem(out lowlevel));
+            CheckResult(System.getCoreSystem(out lowlevel));
 
             uint version;
             CheckResult(lowlevel.getVersion(out version));
 
-            EditorUtility.DisplayDialog("FMOD Studio Unity Integration", "Version: " + VerionNumberToString(version) + "\n\nCopyright \u00A9 Firelight Technologies Pty, Ltd. 2014-2018 \n\nSee LICENSE.TXT for additional license information.", "OK");
+            EditorUtility.DisplayDialog("FMOD Studio Unity Integration", "Version: " + VerionNumberToString(version) + "\n\nCopyright \u00A9 Firelight Technologies Pty, Ltd. 2014-2019 \n\nSee LICENSE.TXT for additional license information.", "OK");
+        }
+
+        [MenuItem("FMOD/Consolidate Plugin Files")]
+        public static void FolderMerge()
+        {
+            string root = "Assets/Plugins/FMOD";
+            string lib = root + "/lib";
+            string src = root + "/src";
+            string runtime = src + "/Runtime";
+            string editor = src + "/Editor";
+            string addons = root + "/addons";
+
+            bool merge = EditorUtility.DisplayDialog("FMOD Plugin Consolidator", "This will consolidate most of the FMOD files into a single directory (Assets/Plugins/FMOD), only if the files have not been moved from their original location.\n\nThis should only need to be done if upgrading from before 2.0.", "OK", "Cancel");
+            if (merge)
+            {
+                if (!Directory.Exists(addons))
+                    AssetDatabase.CreateFolder(root, "addons");
+                if (!Directory.Exists(src))
+                    AssetDatabase.CreateFolder(root, "src");
+                if (!Directory.Exists(runtime))
+                    AssetDatabase.CreateFolder(src, "Runtime");
+                if (!Directory.Exists(lib))
+                    AssetDatabase.CreateFolder(root, "lib");
+                if (!Directory.Exists(lib + "/mac"))
+                    AssetDatabase.CreateFolder(lib, "mac");
+                if (!Directory.Exists(lib + "/win"))
+                    AssetDatabase.CreateFolder(lib, "win");
+                if (!Directory.Exists(lib + "/linux"))
+                    AssetDatabase.CreateFolder(lib, "linux");
+                if (!Directory.Exists(lib + "/linux/x86"))
+                    AssetDatabase.CreateFolder(lib + "/linux", "x86");
+                if (!Directory.Exists(lib + "/linux/x86_64"))
+                    AssetDatabase.CreateFolder(lib + "/linux", "x86_64");
+                if (!Directory.Exists(lib + "/android"))
+                    AssetDatabase.CreateFolder(lib, "android");
+
+                // Scripts
+                var files = Directory.GetFiles(root, "*.cs", SearchOption.TopDirectoryOnly);
+                foreach (var filePath in files)
+                {
+                    MoveAsset(filePath, runtime + "/" + Path.GetFileName(filePath));
+                }
+                MoveAsset(root + "/fmodplugins.cpp", runtime + "/fmodplugins.cpp");
+                MoveAsset(root + "/Timeline", runtime + "/Timeline");
+                MoveAsset("Assets/Plugins/FMOD/Wrapper", runtime + "/wrapper");
+                MoveAsset("Assets/Plugins/Editor/FMOD", editor);
+                if (AssetDatabase.IsValidFolder("Assets/Plugins/FMOD/Runtime") && AssetDatabase.FindAssets("Assets/Plugins/FMOD/Runtime").Length == 0)
+                    Directory.Delete("Assets/Plugins/FMOD/Runtime");
+                if (AssetDatabase.IsValidFolder("Assets/Plugins/Editor") && AssetDatabase.FindAssets("Assets/Plugins/Editor").Length == 0)
+                    Directory.Delete("Assets/Plugins/Editor");
+                // GoogleVR
+                if (AssetDatabase.IsValidFolder("Assets/GoogleVR"))
+                    MoveAsset("Assets/GoogleVR", addons + "/GoogleVR");
+                // ResonanceAudio
+                MoveAsset("Assets/ResonanceAudio", addons + "/ResonanceAudio");
+                // Cache files
+                MoveAsset("Assets/Resources", root + "/Resources");
+                MoveAsset("Assets/FMODStudioCache.asset", root + "/Resources/FMODStudioCache.asset");
+                if (AssetDatabase.IsValidFolder("Assets/Resources") && AssetDatabase.FindAssets("Assets/Resources").Length == 0)
+                    Directory.Delete("Assets/Resources");
+                // Android libs
+                MoveAsset("Assets/Plugins/Android/libs/armeabi-v7a", lib + "/android/armeabi-v7a");
+                MoveAsset("Assets/Plugins/Android/libs/x86", lib + "/android/x86");
+                if (AssetDatabase.IsValidFolder("Assets/Plugins/Android/libs/arm68-v8a"))
+                    MoveAsset("Assets/Plugins/Android/libs/arm68-v8a", lib + "/android/arm64-v8a");
+                MoveAsset("Assets/Plugins/Android/fmod.jar", lib + "/android/fmod.jar");
+                if (AssetDatabase.IsValidFolder("Assets/Plugins/Android") && AssetDatabase.FindAssets("Assets/Plugins/Android").Length == 0)
+                    Directory.Delete("Assets/Plugins/Android", true);
+                AssetDatabase.
+                // Mac libs
+                MoveAsset("Assets/Plugins/fmodstudio.bundle", lib + "/mac/fmodstudio.bundle");
+                MoveAsset("Assets/Plugins/fmodstudioL.bundle", lib + "/mac/fmodstudioL.bundle");
+                MoveAsset("Assets/Plugins/resonanceaudio.bundle", lib + "/mac/resonanceaudio.bundle");
+                if (AssetDatabase.IsValidFolder("Assets/Plugins/gvraudio.bundle"))
+                    MoveAsset("Assets/Plugins/gvraudio.bundle", lib + "/mac/gvraudio.bundle");
+                // iOS libs
+                MoveAsset("Assets/Plugins/iOS", lib + "/ios");
+                // tvOS libs
+                MoveAsset("Assets/Plugins/tvOS", lib + "/tvos");
+                // UWP libs
+                MoveAsset("Assets/Plugins/UWP", lib + "/uwp");
+                // HTML5 libs
+                MoveAsset("Assets/Plugins/WebGL", lib + "/html5");
+                // PS4 libs (optional)
+                if (AssetDatabase.IsValidFolder("Assets/Plugins/PS4"))
+                    MoveAsset("Assets/Plugins/PS4", lib + "/ps4");
+                // Switch libs (optional)
+                if (AssetDatabase.IsValidFolder("Assets/Plugins/Switch"))
+                    MoveAsset("Assets/Plugins/Switch", lib + "/switch");
+                // Xbox One libs (optional)
+                if (AssetDatabase.IsValidFolder("Assets/Plugins/XboxOne"))
+                    MoveAsset("Assets/Plugins/XboxOne", lib + "/xboxone");
+                // Linux libs
+                MoveAsset("Assets/Plugins/x86/libfmod.so", lib + "/linux/x86/libfmod.so");
+                MoveAsset("Assets/Plugins/x86/libfmodL.so", lib + "/linux/x86/libfmodL.so");
+                MoveAsset("Assets/Plugins/x86/libfmodstudio.so", lib + "/linux/x86/libfmodstudio.so");
+                MoveAsset("Assets/Plugins/x86/libfmodstudioL.so", lib + "/linux/x86/libfmodstudioL.so");
+                MoveAsset("Assets/Plugins/x86_64/libfmod.so", lib + "/linux/x86_64/libfmod.so");
+                MoveAsset("Assets/Plugins/x86_64/libfmodL.so", lib + "/linux/x86_64/libfmodL.so");
+                MoveAsset("Assets/Plugins/x86_64/libfmodstudio.so", lib + "/linux/x86_64/libfmodstudio.so");
+                MoveAsset("Assets/Plugins/x86_64/libfmodstudioL.so", lib + "/linux/x86_64/libfmodstudioL.so");
+                MoveAsset("Assets/Plugins/x86_64/libresonanceaudio.so", lib + "/linux/x86_64/libresonanceaudio.so");
+                // Windows libs
+                MoveAsset("Assets/Plugins/x86", lib + "/win/x86");
+                MoveAsset("Assets/Plugins/x86_64", lib + "/win/x86_64");
+
+                Debug.Log("Folder merge finished!");
+            }
+        }
+
+        static void MoveAsset(string from, string to)
+        {
+            string result = AssetDatabase.MoveAsset(from, to);
+            if (!string.IsNullOrEmpty(result))
+            {
+                Debug.LogWarning("[FMOD] Failed to move " + from + " : " + result);
+            }
         }
 
         static List<FMOD.Studio.Bank> masterBanks = new List<FMOD.Studio.Bank>();
         static FMOD.Studio.Bank previewBank;
         static FMOD.Studio.EventDescription previewEventDesc;
         static FMOD.Studio.EventInstance previewEventInstance;
-        
+
         static PreviewState previewState;
         public static PreviewState PreviewState
         {
             get { return previewState; }
         }
 
-        public static void PreviewEvent(EditorEventRef eventRef)
+        public static void PreviewEvent(EditorEventRef eventRef, Dictionary<string, float> previewParamValues)
         {
             bool load = true;
             if (previewEventDesc.isValid())
@@ -433,15 +524,23 @@ namespace FMODUnity
                 CheckResult(previewEventDesc.createInstance(out previewEventInstance));
             }
 
+            foreach (EditorParamRef param in eventRef.Parameters)
+            {
+                FMOD.Studio.PARAMETER_DESCRIPTION paramDesc;
+                CheckResult(previewEventDesc.getParameterDescriptionByName(param.Name, out paramDesc));
+                param.ID = paramDesc.id;
+                PreviewUpdateParameter(param.ID, previewParamValues[param.Name]);
+            }
+
             CheckResult(previewEventInstance.start());
             previewState = PreviewState.Playing;
         }
 
-        public static void PreviewUpdateParameter(string paramName, float paramValue)
+        public static void PreviewUpdateParameter(FMOD.Studio.PARAMETER_ID id, float paramValue)
         {
-			if (previewEventInstance.isValid())
+            if (previewEventInstance.isValid())
             {
-                CheckResult(previewEventInstance.setParameterValue(paramName, paramValue));
+                CheckResult(previewEventInstance.setParameterByID(id, paramValue));
             }
         }
 
@@ -491,7 +590,7 @@ namespace FMODUnity
         public static float[] GetMetering()
         {
             FMOD.System lowlevel;
-            CheckResult(System.getLowLevelSystem(out lowlevel));
+            CheckResult(System.getCoreSystem(out lowlevel));
             FMOD.ChannelGroup master;
             CheckResult(lowlevel.getMasterChannelGroup(out master));
             FMOD.DSP masterHead;
@@ -627,7 +726,6 @@ namespace FMODUnity
                     networkStream.Close();
                     networkStream = null;
                 }
-                //UnityEngine.Debug.Log("FMOD Studio: Script Client failed to connect - Check FMOD Studio is running");
                 return false;
             }
         }
@@ -652,7 +750,6 @@ namespace FMODUnity
             {
                 networkStream.Close();
                 networkStream = null;
-                //UnityEngine.Debug.Log("FMOD Studio: Script Client failed to connect - Check FMOD Studio is running");
                 return null;
             }
         }
@@ -672,33 +769,33 @@ namespace FMODUnity
             }
             return open;
         }
-        
+
         private static string GetMasterBank()
         {
-            GetScriptOutput(String.Format("masterBankFolder = studio.project.workspace.masterBankFolder;"));
-            string bankCountString = GetScriptOutput(String.Format("masterBankFolder.items.length;"));
-            int bankCount = Int32.Parse(bankCountString);
+            GetScriptOutput(string.Format("masterBankFolder = studio.project.workspace.masterBankFolder;"));
+            string bankCountString = GetScriptOutput(string.Format("masterBankFolder.items.length;"));
+            int bankCount = int.Parse(bankCountString);
             for (int i = 0; i < bankCount; i++)
             {
-                string isMaster = GetScriptOutput(String.Format("masterBankFolder.items[{1}].isOfExactType(\"MasterBank\");", i));
+                string isMaster = GetScriptOutput(string.Format("masterBankFolder.items[{1}].isOfExactType(\"MasterBank\");", i));
                 if (isMaster == "true")
                 {
-                    string guid = GetScriptOutput(String.Format("masterBankFolder.items[{1}].id;", i));
+                    string guid = GetScriptOutput(string.Format("masterBankFolder.items[{1}].id;", i));
                     return guid;
                 }
             }
             return "";
         }
-        
+
         private static bool CheckForNameConflict(string folderGuid, string eventName)
         {
-            GetScriptOutput(String.Format("nameConflict = false;"));
-            GetScriptOutput(String.Format("checkFunction = function(val) {{ nameConflict |= val.name == \"{0}\"; }};", eventName));
-            GetScriptOutput(String.Format("studio.project.lookup(\"{0}\").items.forEach(checkFunction, this); ", folderGuid));
-            string conflictBool = GetScriptOutput(String.Format("nameConflict;"));
+            GetScriptOutput(string.Format("nameConflict = false;"));
+            GetScriptOutput(string.Format("checkFunction = function(val) {{ nameConflict |= val.name == \"{0}\"; }};", eventName));
+            GetScriptOutput(string.Format("studio.project.lookup(\"{0}\").items.forEach(checkFunction, this); ", folderGuid));
+            string conflictBool = GetScriptOutput(string.Format("nameConflict;"));
             return conflictBool == "1";
         }
-        
+
         public static string CreateStudioEvent(string eventPath, string eventName)
         {
             var folders = eventPath.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
@@ -707,29 +804,29 @@ namespace FMODUnity
             for (int i = 0; i < folders.Length; i++)
             {
                 string parentGuid = folderGuid;
-                GetScriptOutput(String.Format("guid = \"\";"));
-                GetScriptOutput(String.Format("findFunc = function(val) {{ guid = val.isOfType(\"EventFolder\") && val.name == \"{0}\" ? val.id : guid; }};", folders[i]));
-                GetScriptOutput(String.Format("studio.project.lookup(\"{0}\").items.forEach(findFunc, this);", folderGuid));
-                folderGuid = GetScriptOutput(String.Format("guid;"));
+                GetScriptOutput(string.Format("guid = \"\";"));
+                GetScriptOutput(string.Format("findFunc = function(val) {{ guid = val.isOfType(\"EventFolder\") && val.name == \"{0}\" ? val.id : guid; }};", folders[i]));
+                GetScriptOutput(string.Format("studio.project.lookup(\"{0}\").items.forEach(findFunc, this);", folderGuid));
+                folderGuid = GetScriptOutput(string.Format("guid;"));
                 if (folderGuid == "")
                 {
-                    GetScriptOutput(String.Format("folder = studio.project.create(\"EventFolder\");"));
-                    GetScriptOutput(String.Format("folder.name = \"{0}\"", folders[i]));
-                    GetScriptOutput(String.Format("folder.folder = studio.project.lookup(\"{0}\");", parentGuid));
-                    folderGuid = GetScriptOutput(String.Format("folder.id;"));
+                    GetScriptOutput(string.Format("folder = studio.project.create(\"EventFolder\");"));
+                    GetScriptOutput(string.Format("folder.name = \"{0}\"", folders[i]));
+                    GetScriptOutput(string.Format("folder.folder = studio.project.lookup(\"{0}\");", parentGuid));
+                    folderGuid = GetScriptOutput(string.Format("folder.id;"));
                 }
             }
 
             if (CheckForNameConflict(folderGuid, eventName))
             {
-                EditorUtility.DisplayDialog("Name Conflict", String.Format("The event {0} already exists under {1}", eventName, eventPath), "OK");
+                EditorUtility.DisplayDialog("Name Conflict", string.Format("The event {0} already exists under {1}", eventName, eventPath), "OK");
                 return null;
             }
 
             GetScriptOutput("event = studio.project.create(\"Event\");");
             GetScriptOutput("event.note = \"Placeholder created via Unity\";");
-            GetScriptOutput(String.Format("event.name = \"{0}\"", eventName));
-            GetScriptOutput(String.Format("event.folder = studio.project.lookup(\"{0}\");", folderGuid));
+            GetScriptOutput(string.Format("event.name = \"{0}\"", eventName));
+            GetScriptOutput(string.Format("event.folder = studio.project.lookup(\"{0}\");", folderGuid));
 
             // Add a group track
             GetScriptOutput("track = studio.project.create(\"GroupTrack\");");
@@ -743,7 +840,7 @@ namespace FMODUnity
             GetScriptOutput("tag.folder = studio.project.workspace.masterTagFolder;");
             GetScriptOutput("event.relationships.tags.add(tag);");
 
-            string eventGuid = GetScriptOutput(String.Format("event.id;"));
+            string eventGuid = GetScriptOutput(string.Format("event.id;"));
             return eventGuid;
         }
     }

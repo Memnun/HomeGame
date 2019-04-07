@@ -31,6 +31,7 @@ namespace FMODUnity
         bool hasBankSourceChanged = false;
         string targetAssetPath;
         bool focused = false;
+        bool bankFoldOutState = true;
 
         string PlatformLabel(FMODPlatform platform)
         {
@@ -52,16 +53,10 @@ namespace FMODUnity
                     return "PS4";
                 case FMODPlatform.Windows:
                     return "Windows";
-                case FMODPlatform.WindowsPhone:
-                    return "Windows Phone 8.1";
                 case FMODPlatform.UWP:
                     return "UWP";
                 case FMODPlatform.XboxOne:
                     return "XBox One";
-                case FMODPlatform.WiiU:
-                    return "Wii U";
-                case FMODPlatform.PSVita:
-                    return "PS Vita";
                 case FMODPlatform.Android:
                     return "Android";
                 case FMODPlatform.AppleTV:
@@ -70,6 +65,8 @@ namespace FMODUnity
                     return "High-End Mobile";
                 case FMODPlatform.MobileLow:
                     return "Low-End Mobile";
+                case FMODPlatform.Switch:
+                    return "Switch";
             }
             return "Unknown";
         }
@@ -96,7 +93,7 @@ namespace FMODUnity
 
             string[] toggleChild = new string[ToggleParent.Length + 1];
             Array.Copy(ToggleParent, 0, toggleChild, 1, ToggleParent.Length);
-            toggleChild[0] = String.Format("Inherit ({0})", ToggleParent[(int)parent]);
+            toggleChild[0] = string.Format("Inherit ({0})", ToggleParent[(int)parent]);
 
             int next = EditorGUILayout.Popup(label, overriden ? (int)current  + 1: 0, toggleChild);
             if (next == 0)
@@ -160,7 +157,7 @@ namespace FMODUnity
 
             string[] valuesChild = new string[FrequencyDisplay.Length + 1];
             Array.Copy(FrequencyDisplay, 0, valuesChild, 1, FrequencyDisplay.Length);
-            valuesChild[0] = String.Format("Inherit ({0})", FrequencyDisplay[inheritIndex]);
+            valuesChild[0] = string.Format("Inherit ({0})", FrequencyDisplay[inheritIndex]);
 
             int next = EditorGUILayout.Popup(label, overriden ? currentIndex + 1 : 0, valuesChild);
             if (next == 0)
@@ -187,7 +184,7 @@ namespace FMODUnity
             int buildTargetIndex = Array.IndexOf(SpeakerModeValues, buildTargetSetting);
             string[] speakerModes = new string[SpeakerModeDisplay.Length + 1];
             Array.Copy(SpeakerModeDisplay, 0, speakerModes, 1, SpeakerModeDisplay.Length);
-            speakerModes[0] = String.Format("Current Unity Platform ({0})", SpeakerModeDisplay[buildTargetIndex]);
+            speakerModes[0] = string.Format("Current Unity Platform ({0})", SpeakerModeDisplay[buildTargetIndex]);
 
             bool useCurrentUnity = !Settings.HasSetting(settings, platform);
             
@@ -215,7 +212,7 @@ namespace FMODUnity
 
             string[] valuesChild = new string[SpeakerModeDisplay.Length + 1];
             Array.Copy(SpeakerModeDisplay, 0, valuesChild, 1, SpeakerModeDisplay.Length);
-            valuesChild[0] = String.Format("Inherit ({0})", SpeakerModeDisplay[inheritIndex]);
+            valuesChild[0] = string.Format("Inherit ({0})", SpeakerModeDisplay[inheritIndex]);
 
             int next = EditorGUILayout.Popup(label, overriden ? currentIndex + 1 : 0, valuesChild);
             if (next == 0)
@@ -231,8 +228,8 @@ namespace FMODUnity
         void DisplayParentBuildDirectory(string label, List<PlatformStringSetting> settings, FMODPlatform platform)
         {
             string[] buildDirectories = EditorUtils.GetBankPlatforms();
-            
-            String current = Settings.GetSetting(settings, platform, "Desktop");
+
+            string current = Settings.GetSetting(settings, platform, "Desktop");
             int index = Array.IndexOf(buildDirectories, current);
             if (index < 0) index = 0;
 
@@ -243,13 +240,13 @@ namespace FMODUnity
 
         void DisplayPIEBuildDirectory(string label, List<PlatformStringSetting> settings, FMODPlatform platform)
         {
-            String buildTargetSetting = Settings.GetSetting(settings, RuntimeUtils.GetEditorFMODPlatform(), "Desktop");
+            string buildTargetSetting = Settings.GetSetting(settings, RuntimeUtils.GetEditorFMODPlatform(), "Desktop");
             string[] buildDirectories = new string[EditorUtils.GetBankPlatforms().Length + 1];
             Array.Copy(EditorUtils.GetBankPlatforms(), 0, buildDirectories, 1, EditorUtils.GetBankPlatforms().Length);
             buildDirectories[0] = String.Format("Current Unity Platform ({0})", buildTargetSetting);
 
             bool useCurrentUnity = !Settings.HasSetting(settings, platform);
-            String current = Settings.GetSetting(settings, platform, "Desktop");
+            string current = Settings.GetSetting(settings, platform, "Desktop");
             int index = Array.IndexOf(buildDirectories, current);
             if (useCurrentUnity || index < 0) index = 0;
 
@@ -276,7 +273,7 @@ namespace FMODUnity
 
             string[] valuesChild = new string[buildDirectories.Length + 1];
             Array.Copy(buildDirectories, 0, valuesChild, 1, buildDirectories.Length);
-            valuesChild[0] = String.Format("Inherit ({0})", inherit);
+            valuesChild[0] = string.Format("Inherit ({0})", inherit);
 
             int next = EditorGUILayout.Popup(label, overriden ? index + 1 : 0, valuesChild);
             if (next == 0)
@@ -294,7 +291,7 @@ namespace FMODUnity
         {
             Settings settings = target as Settings;
 
-            var label = new global::System.Text.StringBuilder();
+            var label = new System.Text.StringBuilder();
             label.AppendFormat("<b>{0}</b>", (PlatformLabel(platform)));
             if (children != null)
             {
@@ -322,11 +319,7 @@ namespace FMODUnity
                     style2.richText = true;
                     EditorGUILayout.BeginHorizontal();
                     EditorGUILayout.PrefixLabel(" ");
-                    #if UNITY_5_0 || UNITY_5_1
-                    GUILayout.Label("Unity 5.0 or 5.1 detected: Live update will listen on port <b>9265</b>", style2);
-                    #else
                     GUILayout.Label("Live update will listen on port <b>9264</b>", style2);
-                    #endif
                     EditorGUILayout.EndHorizontal();
                 }
                 DisplayChildBool("Debug Overlay", settings.OverlaySettings, platform);
@@ -340,7 +333,7 @@ namespace FMODUnity
                     if (Settings.HasSetting(settings.BankDirectorySettings, platform))
                     {
                         DisplayChildSpeakerMode("Speaker Mode", settings.SpeakerModeSettings, platform);
-                        EditorGUILayout.HelpBox(String.Format("Match the speaker mode to the setting of the platform <b>{0}</b> inside FMOD Studio", settings.GetBankPlatform(platform)), MessageType.Info, false);
+                        EditorGUILayout.HelpBox(string.Format("Match the speaker mode to the setting of the platform <b>{0}</b> inside FMOD Studio", settings.GetBankPlatform(platform)), MessageType.Info, false);
                     }
                     else
                     {
@@ -375,7 +368,7 @@ namespace FMODUnity
 
             return true;
         }
-        
+
         public override void OnInspectorGUI()
         {
             Settings settings = target as Settings;
@@ -411,7 +404,6 @@ namespace FMODUnity
             EditorGUILayout.EndHorizontal();
             EditorGUILayout.Space();
 
-            
             if (sourceType == 0)
             {
                 EditorGUILayout.BeginHorizontal();
@@ -429,12 +421,12 @@ namespace FMODUnity
                 {
                     GUI.FocusControl(null);
                     string path = EditorUtility.OpenFilePanel("Locate Studio Project", oldPath, "fspro");
-                    if (!String.IsNullOrEmpty(path))
+                    if (!string.IsNullOrEmpty(path))
                     {
                         path = MakePathRelativeToProject(path);
                         settings.SourceProjectPathUnformatted = path;
                         settings.SourceProjectPath = path;
-                        this.Repaint();
+                        Repaint();
                     }
                 }
                 EditorGUILayout.EndHorizontal();
@@ -470,7 +462,7 @@ namespace FMODUnity
                 {
                     GUI.FocusControl(null);
                     var path = EditorUtility.OpenFolderPanel("Locate Build Folder", oldPath, null);
-                    if (!String.IsNullOrEmpty(path))
+                    if (!string.IsNullOrEmpty(path))
                     {
                         path = MakePathRelativeToProject(path);
                         settings.SourceBankPathUnformatted = path;
@@ -554,12 +546,112 @@ namespace FMODUnity
             // ----- Loading -----------------
             EditorGUI.BeginDisabledGroup(settings.ImportType == ImportType.AssetBundle);
             EditorGUILayout.Separator();
-            EditorGUILayout.LabelField("<b>Loading</b>", style);
+            EditorGUILayout.LabelField("<b>Initialization</b>", style);
             EditorGUI.indentLevel++;
-            settings.AutomaticEventLoading = EditorGUILayout.Toggle("Load All Event Data at Initialization", settings.AutomaticEventLoading);
-            EditorGUI.BeginDisabledGroup(!settings.AutomaticEventLoading);
-            settings.AutomaticSampleLoading = EditorGUILayout.Toggle("Load All Sample Data at Initialization", settings.AutomaticSampleLoading);
+
+            settings.BankLoadType = (BankLoadType)EditorGUILayout.EnumPopup("Load Banks", settings.BankLoadType);
+            switch (settings.BankLoadType)
+            {
+                case BankLoadType.All:
+                    break;
+                case BankLoadType.Specified:
+                    settings.AutomaticEventLoading = false;
+                    Texture upArrowTexture = EditorGUIUtility.Load("FMOD/ArrowUp.png") as Texture;
+                    Texture downArrowTexture = EditorGUIUtility.Load("FMOD/ArrowDown.png") as Texture;
+                    bankFoldOutState = EditorGUILayout.Foldout(bankFoldOutState, "Specified Banks", true);
+                    if (bankFoldOutState)
+                    {
+                        for (int i = 0; i < settings.BanksToLoad.Count; i++)
+                        {
+                            EditorGUILayout.BeginHorizontal();
+                            EditorGUI.indentLevel++;
+
+                            var bankName = settings.BanksToLoad[i];
+                            EditorGUILayout.TextField(bankName.Replace(".bank", ""));
+
+                            if (GUILayout.Button(upArrowTexture, GUILayout.ExpandWidth(false)))
+                            {
+                                if (i > 0)
+                                {
+                                    var temp = settings.BanksToLoad[i];
+                                    settings.BanksToLoad[i] = settings.BanksToLoad[i - 1];
+                                    settings.BanksToLoad[i - 1] = temp;
+                                }
+                                continue;
+                            }
+                            if (GUILayout.Button(downArrowTexture, GUILayout.ExpandWidth(false)))
+                            {
+                                if (i < settings.BanksToLoad.Count - 1)
+                                {
+                                    var temp = settings.BanksToLoad[i];
+                                    settings.BanksToLoad[i] = settings.BanksToLoad[i + 1];
+                                    settings.BanksToLoad[i + 1] = temp;
+                                }
+                                continue;
+                            }
+
+                            if (GUILayout.Button("Browse", GUILayout.ExpandWidth(false)))
+                            {
+                                GUI.FocusControl(null);
+                                string path = EditorUtility.OpenFilePanel("Locate Bank", Application.streamingAssetsPath, "bank");
+                                if (!string.IsNullOrEmpty(path))
+                                {
+                                    settings.BanksToLoad[i] = path.Replace(Application.streamingAssetsPath + Path.AltDirectorySeparatorChar, "");
+                                    Repaint();
+                                }
+                            }
+                            if (GUILayout.Button("Remove", GUILayout.ExpandWidth(false)))
+                            {
+                                Settings.Instance.BanksToLoad.RemoveAt(i);
+                                continue;
+                            }
+                            EditorGUILayout.EndHorizontal();
+                            EditorGUI.indentLevel--; 
+                        }
+
+                        GUILayout.BeginHorizontal();
+                        GUILayout.Space(30);
+                        if (GUILayout.Button("Add Bank", GUILayout.ExpandWidth(false)))
+                        {
+                            settings.BanksToLoad.Add("");
+                        }
+                        if (GUILayout.Button("Add All Banks", GUILayout.ExpandWidth(false)))
+                        {
+                            FMODPlatform platform = RuntimeUtils.GetEditorFMODPlatform();
+                            if (platform == FMODPlatform.None)
+                            {
+                                platform = FMODPlatform.PlayInEditor;
+                            }
+                            var banksFound = new List<string>(Directory.GetFiles(EditorUtils.GetBankDirectory(), "*.bank", SearchOption.AllDirectories));
+                            for (int i = 0; i < banksFound.Count; i++)
+                            {
+                                string path = Path.GetFullPath(banksFound[i]);
+                                string bankShortName = Path.GetFullPath(path).Replace(EditorUtils.GetBankDirectory() + Path.DirectorySeparatorChar + settings.GetBankPlatform(platform) + Path.DirectorySeparatorChar, "");
+                                if (!settings.BanksToLoad.Contains(bankShortName))
+                                {
+                                    settings.BanksToLoad.Add(bankShortName);
+                                }
+                            }
+                            Repaint();
+                        }
+                        if (GUILayout.Button("Clear", GUILayout.ExpandWidth(false)))
+                        {
+                            settings.BanksToLoad.Clear();
+                        }
+                        GUILayout.EndHorizontal();
+                    }
+                    break;
+                case BankLoadType.None:
+                    settings.AutomaticEventLoading = false;
+                    break;
+                default:
+                    break;
+            }
+
+            EditorGUI.BeginDisabledGroup(settings.BankLoadType == BankLoadType.None);
+            settings.AutomaticSampleLoading = EditorGUILayout.Toggle("Load Bank Sample Data", settings.AutomaticSampleLoading);
             EditorGUI.EndDisabledGroup();
+
             EditorGUI.indentLevel--;
             EditorGUI.EndDisabledGroup();
 
@@ -570,10 +662,19 @@ namespace FMODUnity
             DisplayEditorBool("Live Update", settings.LiveUpdateSettings, FMODPlatform.PlayInEditor);
             if (settings.IsLiveUpdateEnabled(FMODPlatform.PlayInEditor))
             {
+                EditorGUILayout.BeginHorizontal();
+                settings.LiveUpdatePort = ushort.Parse(EditorGUILayout.TextField("Live Update Port:", settings.LiveUpdatePort.ToString()));
+                if (GUILayout.Button("Reset", GUILayout.ExpandWidth(false)))
+                {
+                    #if UNITY_5_0 || UNITY_5_1
+                    settings.LiveUpdatePort = 9265;
+                    #else
+                    settings.LiveUpdatePort = 9264;
+                    #endif
+                }
+                EditorGUILayout.EndHorizontal();
                 #if UNITY_5_0 || UNITY_5_1
-                EditorGUILayout.HelpBox("Unity 5.0 or 5.1 detected: Live update will listen on port <b>9265</b>", MessageType.Warning, false);
-                #else
-                EditorGUILayout.HelpBox("Live update will listen on port <b>9264</b>", MessageType.Info, false);
+                EditorGUILayout.HelpBox("Unity 5.0 or 5.1 detected: Live update will not be able to use port <b>9264</b>", MessageType.Warning, false);
                 #endif
             }
             DisplayEditorBool("Debug Overlay", settings.OverlaySettings, FMODPlatform.PlayInEditor);
@@ -586,7 +687,7 @@ namespace FMODUnity
             DisplayPIESpeakerMode("Speaker Mode", settings.SpeakerModeSettings, FMODPlatform.PlayInEditor);
             if (settings.HasPlatforms)
             {
-                EditorGUILayout.HelpBox(String.Format("Match the speaker mode to the setting of the platform <b>{0}</b> inside FMOD Studio", settings.GetBankPlatform(FMODPlatform.PlayInEditor)), MessageType.Info, false);
+                EditorGUILayout.HelpBox(string.Format("Match the speaker mode to the setting of the platform <b>{0}</b> inside FMOD Studio", settings.GetBankPlatform(FMODPlatform.PlayInEditor)), MessageType.Info, false);
             }
             else
             {
@@ -602,11 +703,7 @@ namespace FMODUnity
             DisplayParentBool("Live Update", settings.LiveUpdateSettings, FMODPlatform.Default);
             if (settings.IsLiveUpdateEnabled(FMODPlatform.Default))
             {
-                #if UNITY_5_0 || UNITY_5_1
-                EditorGUILayout.HelpBox("Unity 5.0 or 5.1 detected: Live update will listen on port <b>9265</b>", MessageType.Warning, false);
-                #else
                 EditorGUILayout.HelpBox("Live update will listen on port <b>9264</b>", MessageType.Info, false);
-                #endif
             }
             DisplayParentBool("Debug Overlay", settings.OverlaySettings, FMODPlatform.Default);
             DisplayParentFreq("Sample Rate", settings.SampleRateSettings, FMODPlatform.Default);
@@ -620,7 +717,7 @@ namespace FMODUnity
             DisplayParentSpeakerMode("Speaker Mode", settings.SpeakerModeSettings, FMODPlatform.Default);
             if (settings.HasPlatforms)
             {
-                EditorGUILayout.HelpBox(String.Format("Match the speaker mode to the setting of the platform <b>{0}</b> inside FMOD Studio", settings.GetBankPlatform(FMODPlatform.Default)), MessageType.Info, false);
+                EditorGUILayout.HelpBox(string.Format("Match the speaker mode to the setting of the platform <b>{0}</b> inside FMOD Studio", settings.GetBankPlatform(FMODPlatform.Default)), MessageType.Info, false);
             }
             else
             {
@@ -629,7 +726,6 @@ namespace FMODUnity
             DisplayParentInt("Virtual Channel Count", settings.VirtualChannelSettings, FMODPlatform.Default, 1, 2048);
             DisplayParentInt("Real Channel Count", settings.RealChannelSettings, FMODPlatform.Default, 1, 256);
             EditorGUI.indentLevel--;
-
 
             // ----- Plugins ----------------------------------------------
             EditorGUILayout.Separator();
@@ -655,11 +751,10 @@ namespace FMODUnity
             }
             EditorGUI.indentLevel--;
 
-
             // ----- Windows ----------------------------------------------
             DisplayPlatform(FMODPlatform.Desktop, null);
-            DisplayPlatform(FMODPlatform.Mobile, new FMODPlatform[] { FMODPlatform.MobileHigh, FMODPlatform.MobileLow, FMODPlatform.PSVita, FMODPlatform.AppleTV });
-            DisplayPlatform(FMODPlatform.Console, new FMODPlatform[] { FMODPlatform.XboxOne, FMODPlatform.PS4, FMODPlatform.WiiU });
+            DisplayPlatform(FMODPlatform.Mobile, new FMODPlatform[] { FMODPlatform.MobileHigh, FMODPlatform.MobileLow, FMODPlatform.AppleTV });
+            DisplayPlatform(FMODPlatform.Console, new FMODPlatform[] { FMODPlatform.XboxOne, FMODPlatform.PS4, FMODPlatform.Switch });
 
             if (EditorGUI.EndChangeCheck())
             {

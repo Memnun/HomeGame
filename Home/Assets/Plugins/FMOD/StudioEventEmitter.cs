@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System;
-using System.Collections.Generic;
 
 namespace FMODUnity
 {
@@ -8,10 +7,10 @@ namespace FMODUnity
     public class StudioEventEmitter : MonoBehaviour
     {
         [EventRef]
-        public String Event = "";
+        public string Event = "";
         public EmitterGameEvent PlayEvent = EmitterGameEvent.None;
         public EmitterGameEvent StopEvent = EmitterGameEvent.None;
-        public String CollisionTag = "";
+        public string CollisionTag = "";
         public bool AllowFadeout = true;
         public bool TriggerOnce = false;
         public bool Preload = false;
@@ -20,10 +19,10 @@ namespace FMODUnity
         public float OverrideMinDistance = -1.0f;
         public float OverrideMaxDistance = -1.0f;
 
-        private FMOD.Studio.EventDescription eventDescription;
+        protected FMOD.Studio.EventDescription eventDescription;
         public  FMOD.Studio.EventDescription EventDescription { get { return eventDescription; } }
 
-        private FMOD.Studio.EventInstance instance;
+        protected FMOD.Studio.EventInstance instance;
         public  FMOD.Studio.EventInstance EventInstance { get { return instance; } }
 
         private bool hasTriggered = false;
@@ -41,11 +40,11 @@ namespace FMODUnity
                 eventDescription.getSampleLoadingState(out loadingState);
                 while(loadingState == FMOD.Studio.LOADING_STATE.LOADING)
                 {
-#if WINDOWS_UWP
+                    #if WINDOWS_UWP
                     System.Threading.Tasks.Task.Delay(1).Wait();
-#else
+                    #else
                     System.Threading.Thread.Sleep(1);
-#endif
+                    #endif
                     eventDescription.getSampleLoadingState(out loadingState);
                 }
             }
@@ -86,7 +85,7 @@ namespace FMODUnity
 
         void OnTriggerEnter(Collider other)
         {
-            if (String.IsNullOrEmpty(CollisionTag) || other.CompareTag(CollisionTag))
+            if (string.IsNullOrEmpty(CollisionTag) || other.CompareTag(CollisionTag))
             {
                 HandleGameEvent(EmitterGameEvent.TriggerEnter);
             }
@@ -94,7 +93,7 @@ namespace FMODUnity
 
         void OnTriggerExit(Collider other)
         {
-            if (String.IsNullOrEmpty(CollisionTag) || other.CompareTag(CollisionTag))
+            if (string.IsNullOrEmpty(CollisionTag) || other.CompareTag(CollisionTag))
             {
                 HandleGameEvent(EmitterGameEvent.TriggerExit);
             }
@@ -102,7 +101,7 @@ namespace FMODUnity
 
         void OnTriggerEnter2D(Collider2D other)
         {
-            if (String.IsNullOrEmpty(CollisionTag) || other.CompareTag(CollisionTag))
+            if (string.IsNullOrEmpty(CollisionTag) || other.CompareTag(CollisionTag))
             {
                 HandleGameEvent(EmitterGameEvent.TriggerEnter2D);
             }
@@ -110,7 +109,7 @@ namespace FMODUnity
 
         void OnTriggerExit2D(Collider2D other)
         {
-            if (String.IsNullOrEmpty(CollisionTag) || other.CompareTag(CollisionTag))
+            if (string.IsNullOrEmpty(CollisionTag) || other.CompareTag(CollisionTag))
             {
                 HandleGameEvent(EmitterGameEvent.TriggerExit2D);
             }
@@ -160,7 +159,7 @@ namespace FMODUnity
                 return;
             }
 
-            if (String.IsNullOrEmpty(Event))
+            if (string.IsNullOrEmpty(Event))
             {
                 return;
             }
@@ -215,7 +214,7 @@ namespace FMODUnity
 
             foreach(var param in Params)
             {
-                instance.setParameterValue(param.Name, param.Value);
+                instance.setParameterByID(param.ID, param.Value);
             }
 
             if (is3D && OverrideAttenuation)
@@ -227,7 +226,6 @@ namespace FMODUnity
             instance.start();
 
             hasTriggered = true;
-
         }
 
         public void Stop()
@@ -239,15 +237,7 @@ namespace FMODUnity
                 instance.clearHandle();
             }
         }
-        
-        public void SetParameter(string name, float value)
-        {
-            if (instance.isValid())
-            {
-                instance.setParameterValue(name, value);
-            }
-        }
-        
+
         public bool IsPlaying()
         {
             if (instance.isValid() && instance.isValid())
@@ -257,6 +247,6 @@ namespace FMODUnity
                 return (playbackState != FMOD.Studio.PLAYBACK_STATE.STOPPED);
             }
             return false;
-        }        
+        }
     }
 }
