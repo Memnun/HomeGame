@@ -22,26 +22,26 @@ public class CameraCont : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Globals.currentPlayer.name == "Player1")
+        if (Globals.Instance.playerList[Globals.Instance.currentPlayer].name == "Player1")
         {
             MainCamera.transform.position = Vector3.Lerp(startingPos, Player1POS.transform.position, (Time.time-lerpTimer)*speed);
         }
 
-        if (Globals.currentPlayer.name == "Player2")
+        if (Globals.Instance.playerList[Globals.Instance.currentPlayer].name == "Player2")
         {
 
             MainCamera.transform.position = Vector3.Lerp(startingPos, Player2POS.transform.position, (Time.time-lerpTimer)*speed);
             
         }
     
-        if (Globals.currentPlayer.name == "Player3")
+        if (Globals.Instance.playerList[Globals.Instance.currentPlayer].name == "Player3")
         {
 
             MainCamera.transform.position = Vector3.Lerp(startingPos, Player3POS.transform.position, (Time.time-lerpTimer)*speed);
             
         }
     
-        if (Globals.currentPlayer.name == "Player4")
+        if (Globals.Instance.playerList[Globals.Instance.currentPlayer].name == "Player4")
         {
 
             MainCamera.transform.position = Vector3.Lerp(startingPos, Player4POS.transform.position, (Time.time-lerpTimer)*speed);

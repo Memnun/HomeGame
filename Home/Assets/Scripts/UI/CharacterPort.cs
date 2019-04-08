@@ -16,7 +16,7 @@ public class CharacterPort : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    	switch (Globals.currentPlayerNumber) {
+    	switch (Globals.Instance.currentPlayer) {
     		case 1:
     			ChrIcon.sprite = Ch1;
     			break;

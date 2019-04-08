@@ -24,7 +24,7 @@ public class CardHandler : ScriptableObject
 
 
 
-    public bool PlayCard(int itemID, GameObject target1, GameObject target2) {
+    public bool PlayCard(int itemID, GameObject target2) {
     	switch (itemID) {
     		case 1:
     			return true;
