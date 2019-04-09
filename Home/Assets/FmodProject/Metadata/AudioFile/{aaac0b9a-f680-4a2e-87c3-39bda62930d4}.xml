@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{aaac0b9a-f680-4a2e-87c3-39bda62930d4}">
+		<property name="assetPath">
+			<value>announcer_voice_classic_FPS_style_killingspree.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.1459270833333335</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{7e472eb6-3c4b-4008-ae61-1443ecf36f70}</destination>
+		</relationship>
+	</object>
+</objects>

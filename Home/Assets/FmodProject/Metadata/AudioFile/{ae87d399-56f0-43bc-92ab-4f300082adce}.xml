@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{ae87d399-56f0-43bc-92ab-4f300082adce}">
+		<property name="assetPath">
+			<value>announcer_voice_classic_FPS_style_gameover.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.4626666666666668</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{7e472eb6-3c4b-4008-ae61-1443ecf36f70}</destination>
+		</relationship>
+	</object>
+</objects>

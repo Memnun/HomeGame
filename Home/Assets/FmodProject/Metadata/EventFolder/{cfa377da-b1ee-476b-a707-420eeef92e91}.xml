@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="EventFolder" id="{cfa377da-b1ee-476b-a707-420eeef92e91}">
+		<property name="name">
+			<value>Tansition_VO</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ebd41849-424d-40a7-b304-4155c0327c54}</destination>
+		</relationship>
+	</object>
+</objects>
