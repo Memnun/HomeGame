@@ -12,17 +12,28 @@
 		</relationship>
 	</object>
 	<object class="GameParameter" id="{883024f4-901d-4897-ae05-defd7e18f48f}">
-		<property name="minimum">
-			<value>1</value>
+		<property name="parameterType">
+			<value>2</value>
 		</property>
 		<property name="maximum">
 			<value>3</value>
 		</property>
+		<property name="enumerationLabels">
+			<value>Spring</value>
+			<value>Summer</value>
+			<value>Fall</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
 		<property name="initialValue">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<property name="seekSpeed">
-			<value>3.2000000476837158</value>
+			<value>4.8000000715255737</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
 		</property>
 	</object>
 </objects>
