@@ -7,6 +7,8 @@
 		<relationship name="items">
 			<destination>{c50e5cdc-76aa-4f04-9582-9dd3d63fb9a9}</destination>
 			<destination>{2877e078-2ece-457e-8e34-fd8cc3b9272a}</destination>
+			<destination>{88ee78c3-5da7-4d3e-9e03-38728f2c2459}</destination>
+			<destination>{ac29475a-04da-4bb2-9f56-f6e5b854daac}</destination>
 		</relationship>
 	</object>
 	<object class="Tag" id="{c50e5cdc-76aa-4f04-9582-9dd3d63fb9a9}">
@@ -17,6 +19,16 @@
 	<object class="Tag" id="{2877e078-2ece-457e-8e34-fd8cc3b9272a}">
 		<property name="name">
 			<value>Narration</value>
+		</property>
+	</object>
+	<object class="Tag" id="{88ee78c3-5da7-4d3e-9e03-38728f2c2459}">
+		<property name="name">
+			<value>Ambience</value>
+		</property>
+	</object>
+	<object class="Tag" id="{ac29475a-04da-4bb2-9f56-f6e5b854daac}">
+		<property name="name">
+			<value>Music</value>
 		</property>
 	</object>
 </objects>

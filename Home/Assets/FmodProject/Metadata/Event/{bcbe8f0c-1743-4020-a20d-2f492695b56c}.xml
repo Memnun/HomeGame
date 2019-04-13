@@ -8,7 +8,7 @@
 			<value>2</value>
 		</property>
 		<relationship name="folder">
-			<destination>{a10f2148-8da3-4838-8788-d2b94578e27e}</destination>
+			<destination>{d11617c6-7a9f-4131-a1e0-315348f7c4d7}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{62dc9961-ab59-4be1-98eb-e75e8abb6e95}</destination>
@@ -30,6 +30,12 @@
 		</relationship>
 		<relationship name="timeline">
 			<destination>{9a714066-7f59-4655-bee8-cb565382aa69}</destination>
+		</relationship>
+		<relationship name="parameters">
+			<destination>{f196bc39-d547-44be-86e6-115d09a96c13}</destination>
+		</relationship>
+		<relationship name="tags">
+			<destination>{88ee78c3-5da7-4d3e-9e03-38728f2c2459}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{62dc9961-ab59-4be1-98eb-e75e8abb6e95}">
@@ -61,6 +67,11 @@
 		</relationship>
 	</object>
 	<object class="Timeline" id="{9a714066-7f59-4655-bee8-cb565382aa69}" />
+	<object class="ParameterProxy" id="{f196bc39-d547-44be-86e6-115d09a96c13}">
+		<relationship name="preset">
+			<destination>{883024f4-901d-4897-ae05-defd7e18f48f}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerMaster" id="{4eedc6c6-d5ca-44e3-ba3b-bb3e179641dd}">
 		<relationship name="effectChain">
 			<destination>{c91549a0-e541-4878-97a1-7976ed84acc4}</destination>

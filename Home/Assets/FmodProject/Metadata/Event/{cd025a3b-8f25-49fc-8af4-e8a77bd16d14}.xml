@@ -36,6 +36,9 @@
 		<relationship name="parameters">
 			<destination>{a684fa0d-0128-470c-8ab1-41b618ac7b90}</destination>
 		</relationship>
+		<relationship name="tags">
+			<destination>{88ee78c3-5da7-4d3e-9e03-38728f2c2459}</destination>
+		</relationship>
 		<relationship name="banks">
 			<destination>{ad893b38-9b0a-468e-92e1-162a38be916d}</destination>
 		</relationship>
