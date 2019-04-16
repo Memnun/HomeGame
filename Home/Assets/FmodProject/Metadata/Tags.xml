@@ -9,6 +9,12 @@
 			<destination>{2877e078-2ece-457e-8e34-fd8cc3b9272a}</destination>
 			<destination>{88ee78c3-5da7-4d3e-9e03-38728f2c2459}</destination>
 			<destination>{ac29475a-04da-4bb2-9f56-f6e5b854daac}</destination>
+			<destination>{cf92ff52-f7bc-47f0-b0a7-66fc931d9610}</destination>
+			<destination>{a2e790dd-5bf5-4ddf-bab1-0cf72ff581b3}</destination>
+			<destination>{80fad126-97c2-406c-82e6-6eab904e3e74}</destination>
+			<destination>{37b491dd-0406-47f5-967d-1aac767b5501}</destination>
+			<destination>{280bf9d1-25cb-453c-b889-5ad0ae765781}</destination>
+			<destination>{7b6158f4-929a-49b9-8228-05d47906bb98}</destination>
 		</relationship>
 	</object>
 	<object class="Tag" id="{c50e5cdc-76aa-4f04-9582-9dd3d63fb9a9}">
@@ -29,6 +35,36 @@
 	<object class="Tag" id="{ac29475a-04da-4bb2-9f56-f6e5b854daac}">
 		<property name="name">
 			<value>Music</value>
+		</property>
+	</object>
+	<object class="Tag" id="{cf92ff52-f7bc-47f0-b0a7-66fc931d9610}">
+		<property name="name">
+			<value>Transition</value>
+		</property>
+	</object>
+	<object class="Tag" id="{a2e790dd-5bf5-4ddf-bab1-0cf72ff581b3}">
+		<property name="name">
+			<value>Fox</value>
+		</property>
+	</object>
+	<object class="Tag" id="{80fad126-97c2-406c-82e6-6eab904e3e74}">
+		<property name="name">
+			<value>Random</value>
+		</property>
+	</object>
+	<object class="Tag" id="{37b491dd-0406-47f5-967d-1aac767b5501}">
+		<property name="name">
+			<value>Events</value>
+		</property>
+	</object>
+	<object class="Tag" id="{280bf9d1-25cb-453c-b889-5ad0ae765781}">
+		<property name="name">
+			<value>Cards</value>
+		</property>
+	</object>
+	<object class="Tag" id="{7b6158f4-929a-49b9-8228-05d47906bb98}">
+		<property name="name">
+			<value>Event</value>
 		</property>
 	</object>
 </objects>

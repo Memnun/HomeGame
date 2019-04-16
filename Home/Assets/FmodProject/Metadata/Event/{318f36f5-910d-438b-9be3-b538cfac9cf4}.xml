@@ -38,6 +38,10 @@
 		<relationship name="parameters">
 			<destination>{b76589dd-e5a3-4408-b99d-36c5fa4c0e1f}</destination>
 		</relationship>
+		<relationship name="tags">
+			<destination>{c50e5cdc-76aa-4f04-9582-9dd3d63fb9a9}</destination>
+			<destination>{37b491dd-0406-47f5-967d-1aac767b5501}</destination>
+		</relationship>
 	</object>
 	<object class="EventMixer" id="{cf5107c4-f4fc-4fc7-b72e-ce7c8934ee6b}">
 		<relationship name="masterBus">
