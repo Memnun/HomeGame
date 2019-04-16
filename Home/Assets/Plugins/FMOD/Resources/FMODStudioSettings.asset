@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: FMODStudioSettings
   m_EditorClassIdentifier: 
   SwitchSettingsMigration: 1
-  HasSourceProject: 1
-  HasPlatforms: 1
+  HasSourceProject: 0
+  HasPlatforms: 0
   sourceProjectPath: Assets/FmodProject/Game Jam.fspro
   SourceProjectPathUnformatted: Assets/FmodProject/Game Jam.fspro
-  SourceBankPathUnformatted: Assets/FmodProject/Build
+  SourceBankPathUnformatted: Assets/FmodProject/Build/Desktop
   AutomaticEventLoading: 1
   BankLoadType: 0
   AutomaticSampleLoading: 0
@@ -38,9 +38,9 @@ MonoBehaviour:
     Value: 0
   LiveUpdateSettings:
   - Platform: 1
-    Value: 1
-  - Platform: 2
     Value: 0
+  - Platform: 2
+    Value: 1
   - Platform: 20
     Value: 0
   OverlaySettings:

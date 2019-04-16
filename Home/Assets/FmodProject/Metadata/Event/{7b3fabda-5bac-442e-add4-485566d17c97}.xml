@@ -64,7 +64,17 @@
 			<destination>{083287a3-9479-4108-9512-c041197947ad}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{fd571b9b-1006-4496-abcf-6d6ea801379c}" />
+	<object class="EventAutomatableProperties" id="{fd571b9b-1006-4496-abcf-6d6ea801379c}">
+		<property name="maxVoices">
+			<value>1</value>
+		</property>
+		<property name="dopplerEnabled">
+			<value>true</value>
+		</property>
+		<property name="dopplerScale">
+			<value>500</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{87edaa64-58c2-4e7b-b7a2-6711daa74ac0}" />
 	<object class="GroupTrack" id="{98eaed31-adf0-46ad-90cf-1df3d5185080}">
 		<relationship name="automationTracks">
