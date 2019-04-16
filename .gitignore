@@ -36,5 +36,6 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
-# FMOD meta files
-Assets/FmodProject/*.meta
+# FMOD meta files / cache
+Home/Assets/FmodProject/*.meta
+Home/Assets/FmodProject/.cache/
