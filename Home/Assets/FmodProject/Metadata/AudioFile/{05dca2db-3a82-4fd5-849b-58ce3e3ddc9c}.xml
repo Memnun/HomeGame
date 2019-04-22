@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{05dca2db-3a82-4fd5-849b-58ce3e3ddc9c}">
+		<property name="assetPath">
+			<value>Ambience/Wind,Ext,Breeze,Reeds,Rustle,Howl,Whip,Whistle.ogg</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>209.64329166666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{7e472eb6-3c4b-4008-ae61-1443ecf36f70}</destination>
+		</relationship>
+	</object>
+</objects>
