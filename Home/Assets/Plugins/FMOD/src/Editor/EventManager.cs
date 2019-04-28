@@ -495,7 +495,10 @@ namespace FMODUnity
                 ? "bank"
                 : "bytes";
 
-            string bankSourceFolder = EditorUtils.GetBankDirectory() + Path.DirectorySeparatorChar + Settings.Instance.GetBankPlatform(platform);
+            string bankSourceFolder =
+                Settings.Instance.HasPlatforms
+                ? EditorUtils.GetBankDirectory() + Path.DirectorySeparatorChar + Settings.Instance.GetBankPlatform(platform)
+                : EditorUtils.GetBankDirectory();
 
             if (Path.GetFullPath(bankTargetFolder).TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar).ToUpperInvariant() ==
                 Path.GetFullPath(bankSourceFolder).TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar).ToUpperInvariant())
@@ -522,9 +525,12 @@ namespace FMODUnity
                 // Copy over any files that don't match timestamp or size or don't exist
                 foreach (var bankRef in eventCache.EditorBanks)
                 {
-                    var subDir = Path.GetDirectoryName(bankRef.Path).Replace(bankSourceFolder, "");
-                    string sourcePath = bankSourceFolder + subDir + Path.DirectorySeparatorChar + bankRef.Name + ".bank";
-                    string targetPath = bankTargetFolder + subDir + Path.DirectorySeparatorChar + bankRef.Name + "." + bankTargetExension;
+                    var dirName = Path.GetDirectoryName(bankRef.Path);
+                    string subDir = dirName.Replace(bankSourceFolder, "");
+                    bankRef.SubDir = subDir.TrimStart(Path.DirectorySeparatorChar);
+
+                    string sourcePath = bankSourceFolder + Path.DirectorySeparatorChar + bankRef.Name + ".bank";
+                    string targetPath = bankTargetFolder + Path.DirectorySeparatorChar + bankRef.Name + "." + bankTargetExension;
 
                     FileInfo sourceInfo = new FileInfo(sourcePath);
                     FileInfo targetInfo = new FileInfo(targetPath);

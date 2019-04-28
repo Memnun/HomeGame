@@ -9,15 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cbc7d249a55940e4b3a3f4bf59cfdba, type: 3}
+  m_Script: {fileID: 11500000, guid: eef8d824ea7b63742966aaa0e94ac383, type: 3}
   m_Name: FMODStudioSettings
   m_EditorClassIdentifier: 
   SwitchSettingsMigration: 1
-  HasSourceProject: 0
-  HasPlatforms: 0
-  sourceProjectPath: Assets/FmodProject/Game Jam.fspro
+  HasSourceProject: 1
+  HasPlatforms: 1
+  sourceProjectPath: /Users/sg/Git/HomeGame/Home/Assets/FmodProject/Game Jam.fspro
   SourceProjectPathUnformatted: Assets/FmodProject/Game Jam.fspro
-  SourceBankPathUnformatted: Assets/FmodProject/Build/Desktop
+  SourceBankPathUnformatted: Assets/FmodProject/Build
   AutomaticEventLoading: 1
   BankLoadType: 0
   AutomaticSampleLoading: 0
@@ -38,9 +38,9 @@ MonoBehaviour:
     Value: 0
   LiveUpdateSettings:
   - Platform: 1
-    Value: 0
-  - Platform: 2
     Value: 1
+  - Platform: 2
+    Value: 0
   - Platform: 20
     Value: 0
   OverlaySettings:
@@ -77,7 +77,6 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Master Bank
-  Banks:
-  - Master Bank.strings
+  Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264

@@ -1,7 +1,9 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
+using System.Runtime.InteropServices;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -530,11 +532,11 @@ retry:
 
                 if (focus)
                 {
-                    lowlevelSystem.mixerResume();
+                    coreSystem.mixerResume();
                 }
                 else
                 {
-                    lowlevelSystem.mixerSuspend();
+                    coreSystem.mixerSuspend();
                 }
             }
         }
@@ -1005,7 +1007,7 @@ retry:
         private void LoadPlugins(Settings fmodSettings)
         {
             #if (UNITY_IOS || UNITY_TVOS) && !UNITY_EDITOR
-            FmodUnityNativePluginInit(lowlevelSystem.handle);
+            FmodUnityNativePluginInit(coreSystem.handle);
             #else
 
             FMOD.RESULT result;

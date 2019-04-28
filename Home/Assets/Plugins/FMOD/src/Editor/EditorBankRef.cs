@@ -20,9 +20,12 @@ namespace FMODUnity
 
         [SerializeField]
         public string Path;
+
+        [SerializeField]
+        public string SubDir;
         public string Name
         {
-            get { return global::System.IO.Path.GetFileNameWithoutExtension(Path); }
+            get { return (string.IsNullOrEmpty(SubDir) ? "" : SubDir + global::System.IO.Path.DirectorySeparatorChar) + global::System.IO.Path.GetFileNameWithoutExtension(Path); }
         }
 
         [SerializeField]
@@ -36,7 +39,7 @@ namespace FMODUnity
         [SerializeField]
         public FMOD.RESULT LoadResult;
 
-        [SerializeField]        
+        [SerializeField]
         public List<NameValuePair> FileSizes;
 
         public bool Exists;
