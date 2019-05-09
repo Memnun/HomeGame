@@ -4,11 +4,14 @@
 		<property name="name">
 			<value>Spring</value>
 		</property>
+		<property name="note">
+			<value>Called by a function in code. Leave empty space before the stop event </value>
+		</property>
 		<property name="outputFormat">
 			<value>0</value>
 		</property>
 		<relationship name="folder">
-			<destination>{757eb43c-89a0-4f08-b3bc-8768391e3907}</destination>
+			<destination>{c258d114-6deb-4bdd-a813-a5388b0b70ed}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{2b81f4fe-fdc2-4970-be19-6d1f00e486aa}</destination>
