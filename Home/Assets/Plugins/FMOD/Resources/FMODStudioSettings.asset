@@ -9,15 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eef8d824ea7b63742966aaa0e94ac383, type: 3}
+  m_Script: {fileID: 11500000, guid: 80c99d967d99f42bd920343444470159, type: 3}
   m_Name: FMODStudioSettings
   m_EditorClassIdentifier: 
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: /Users/sg/Git/HomeGame/Home/Assets/FmodProject/Game Jam.fspro
-  SourceProjectPathUnformatted: Assets/FmodProject/Game Jam.fspro
-  SourceBankPathUnformatted: Assets/FmodProject/Build
+  sourceProjectPath: /Users/sg/Git/HomeGame/Home/Assets/Circle of Seasons FMOD/Circle
+    of Seasons.fspro
+  SourceProjectPathUnformatted: Assets/Circle of Seasons FMOD/Circle of Seasons.fspro
+  SourceBankPathUnformatted: Assets/Circle of Seasons FMOD/Build
   AutomaticEventLoading: 1
   BankLoadType: 0
   AutomaticSampleLoading: 0

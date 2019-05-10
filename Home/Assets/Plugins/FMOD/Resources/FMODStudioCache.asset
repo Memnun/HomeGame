@@ -9,38 +9,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Script: {fileID: 11500000, guid: 698824de2299f4086897ddc56768b64c, type: 3}
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 114478337116746348}
-  - {fileID: 114511121758424718}
+  - {fileID: 114259136193900046}
+  - {fileID: 114101773101848612}
   EditorEvents:
-  - {fileID: 114610306255024396}
-  - {fileID: 114812060004242738}
-  - {fileID: 114005766976137052}
-  - {fileID: 114650244826469474}
-  - {fileID: 114011374169951016}
-  - {fileID: 114121296058914626}
-  - {fileID: 114905088466402526}
-  - {fileID: 114743368751984534}
-  - {fileID: 114671510853676674}
-  - {fileID: 114065081192006382}
-  - {fileID: 114105992506805158}
-  - {fileID: 114468456875775792}
-  - {fileID: 114881828908597676}
-  - {fileID: 114587312482359640}
+  - {fileID: 114643021547568200}
+  - {fileID: 114231280532875276}
+  - {fileID: 114588899100318162}
+  - {fileID: 114621777041167252}
+  - {fileID: 114281868015339728}
+  - {fileID: 114803248241248948}
+  - {fileID: 114221122202639002}
+  - {fileID: 114362113875214852}
+  - {fileID: 114292298009565050}
+  - {fileID: 114512286941743314}
+  - {fileID: 114380334701877404}
+  - {fileID: 114627319832085186}
+  - {fileID: 114257522204779828}
+  - {fileID: 114640497006133470}
   EditorParameters:
-  - {fileID: 114824374324274340}
-  - {fileID: 114151775813268516}
-  - {fileID: 114960752631914894}
+  - {fileID: 114964147450202250}
+  - {fileID: 114611038972968248}
+  - {fileID: 114665252550527984}
   MasterBanks:
-  - {fileID: 114511121758424718}
+  - {fileID: 114101773101848612}
   StringsBanks:
-  - {fileID: 114478337116746348}
-  stringsBankWriteTime: 636911953780000000
+  - {fileID: 114259136193900046}
+  stringsBankWriteTime: 636930442990000000
   cacheVersion: 3
---- !u!114 &114005766976137052
+--- !u!114 &114101773101848612
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -49,132 +49,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Script: {fileID: 11500000, guid: e73bd85867a234f99bdbb06b7525c591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Cards/Card_Draw
-  guid: 388f2b044c846044a508b160a4b0014b
-  Banks:
-  - {fileID: 114511121758424718}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &114011374169951016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/Ambience/Ambience_Season_2D
-  guid: 3b5a02cd258ffc498af4e8a77bd16d14
-  Banks:
-  - {fileID: 114511121758424718}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 114214646249638734}
-  - {fileID: 114346913825909648}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 106154
---- !u!114 &114065081192006382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Player-Assigned/Movement_Player
-  guid: a77c4e6d814dee40abbf9e1ad32e1232
-  Banks:
-  - {fileID: 114511121758424718}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 512
---- !u!114 &114105992506805158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Gamplay_Loop
-  guid: c5a16aeb744d6c4e98a400fd1da22323
-  Banks:
-  - {fileID: 114511121758424718}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 98461
---- !u!114 &114121296058914626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: snapshot:/Pause Menu
-  guid: 4a2dda68edef2848ab446796b1a33c4e
-  Banks:
-  - {fileID: 114511121758424718}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &114151775813268516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: Turn
-  m_EditorClassIdentifier: 
-  Name: Turn
-  Min: 0
-  Max: 4
-  Default: 0
+  Path: /Users/sg/Git/HomeGame/Home/Assets/Circle of Seasons FMOD/Build/Desktop/Master
+    Bank.bank
+  SubDir: 
+  lastModified: 636930442990000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 23478496
   Exists: 1
---- !u!114 &114214646249638734
+--- !u!114 &114115092206117954
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -183,7 +70,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Script: {fileID: 11500000, guid: 36bed43089d26427f9ae8c0b84313954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Rain
@@ -191,7 +78,7 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
---- !u!114 &114346913825909648
+--- !u!114 &114221122202639002
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -200,271 +87,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Wind
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &114468456875775792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Transitions/Turn Transition
-  guid: d5301fa006a92e40810f7f27ffaab67d
-  Banks:
-  - {fileID: 114511121758424718}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &114478337116746348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: /Users/sg/Git/HomeGame/Home/Assets/FmodProject/Build/Desktop/Master Bank.strings.bank
-  SubDir: 
-  lastModified: 636911953780000000
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 1946
-  Exists: 1
---- !u!114 &114511121758424718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: /Users/sg/Git/HomeGame/Home/Assets/FmodProject/Build/Desktop/Master Bank.bank
-  SubDir: 
-  lastModified: 636911953780000000
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 23478496
-  Exists: 1
---- !u!114 &114587312482359640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Player-Assigned/Resource_Get
-  guid: f4aafa580124a544a8cfda1071bed452
-  Banks:
-  - {fileID: 114511121758424718}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 2000
---- !u!114 &114610306255024396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/UI/UI_Game_Start
-  guid: 000d91a7c4e33546b2af8360df94916a
-  Banks:
-  - {fileID: 114511121758424718}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 2756
---- !u!114 &114650244826469474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/UI/UI_Click
-  guid: 3afdaff7d19d1c41844c0eef66f606b4
-  Banks:
-  - {fileID: 114511121758424718}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 500
---- !u!114 &114671510853676674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Cards/Card_Event_Good
-  guid: 9b837bf819abac4b91e3b58488a9fe6b
-  Banks:
-  - {fileID: 114511121758424718}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &114743368751984534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Cards/Card_Event_Bad
-  guid: 54a9a60c06388e4d88a0086d263b9205
-  Banks:
-  - {fileID: 114511121758424718}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &114812060004242738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Player-Assigned/Resource_Spend
-  guid: 365174df29fa2342823aaf561a28a587
-  Banks:
-  - {fileID: 114511121758424718}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1200
---- !u!114 &114824374324274340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: Narrator
-  m_EditorClassIdentifier: 
-  Name: Narrator
-  Min: 0
-  Max: 2
-  Default: 0
-  Exists: 1
---- !u!114 &114881828908597676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/Ambience/Stream_3D
-  guid: daab3f7bac5b2e44add4485566d17c97
-  Banks:
-  - {fileID: 114511121758424718}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 48789
---- !u!114 &114905088466402526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Script: {fileID: 11500000, guid: e6c82487733a44c86a458746137aa655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Path: event:/Music/Menu_Loop
   guid: 51c5ed3976b92d4ba3427e3800ec91c0
   Banks:
-  - {fileID: 114511121758424718}
+  - {fileID: 114101773101848612}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -472,7 +101,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 30927
---- !u!114 &114960752631914894
+--- !u!114 &114231280532875276
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -481,11 +110,384 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Script: {fileID: 11500000, guid: e6c82487733a44c86a458746137aa655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player-Assigned/Resource_Spend
+  guid: 365174df29fa2342823aaf561a28a587
+  Banks:
+  - {fileID: 114101773101848612}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1200
+--- !u!114 &114257522204779828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c82487733a44c86a458746137aa655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Stream_3D
+  guid: daab3f7bac5b2e44add4485566d17c97
+  Banks:
+  - {fileID: 114101773101848612}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 48789
+--- !u!114 &114259136193900046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e73bd85867a234f99bdbb06b7525c591, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: /Users/sg/Git/HomeGame/Home/Assets/Circle of Seasons FMOD/Build/Desktop/Master
+    Bank.strings.bank
+  SubDir: 
+  lastModified: 636930442990000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1946
+  Exists: 1
+--- !u!114 &114281868015339728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c82487733a44c86a458746137aa655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Ambience_Season_2D
+  guid: 3b5a02cd258ffc498af4e8a77bd16d14
+  Banks:
+  - {fileID: 114101773101848612}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 114115092206117954}
+  - {fileID: 114292481096912326}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 106154
+--- !u!114 &114292298009565050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c82487733a44c86a458746137aa655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Cards/Card_Event_Good
+  guid: 9b837bf819abac4b91e3b58488a9fe6b
+  Banks:
+  - {fileID: 114101773101848612}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &114292481096912326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36bed43089d26427f9ae8c0b84313954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Wind
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &114362113875214852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c82487733a44c86a458746137aa655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Cards/Card_Event_Bad
+  guid: 54a9a60c06388e4d88a0086d263b9205
+  Banks:
+  - {fileID: 114101773101848612}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &114380334701877404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c82487733a44c86a458746137aa655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Gamplay_Loop
+  guid: c5a16aeb744d6c4e98a400fd1da22323
+  Banks:
+  - {fileID: 114101773101848612}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 98461
+--- !u!114 &114512286941743314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c82487733a44c86a458746137aa655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player-Assigned/Movement_Player
+  guid: a77c4e6d814dee40abbf9e1ad32e1232
+  Banks:
+  - {fileID: 114101773101848612}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 512
+--- !u!114 &114588899100318162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c82487733a44c86a458746137aa655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Cards/Card_Draw
+  guid: 388f2b044c846044a508b160a4b0014b
+  Banks:
+  - {fileID: 114101773101848612}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &114611038972968248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36bed43089d26427f9ae8c0b84313954, type: 3}
+  m_Name: Turn
+  m_EditorClassIdentifier: 
+  Name: Turn
+  Min: 0
+  Max: 4
+  Default: 0
+  Exists: 1
+--- !u!114 &114621777041167252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c82487733a44c86a458746137aa655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI/UI_Click
+  guid: 3afdaff7d19d1c41844c0eef66f606b4
+  Banks:
+  - {fileID: 114101773101848612}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 500
+--- !u!114 &114627319832085186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c82487733a44c86a458746137aa655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Transitions/Turn Transition
+  guid: d5301fa006a92e40810f7f27ffaab67d
+  Banks:
+  - {fileID: 114101773101848612}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &114640497006133470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c82487733a44c86a458746137aa655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player-Assigned/Resource_Get
+  guid: f4aafa580124a544a8cfda1071bed452
+  Banks:
+  - {fileID: 114101773101848612}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2000
+--- !u!114 &114643021547568200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c82487733a44c86a458746137aa655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI/UI_Game_Start
+  guid: 000d91a7c4e33546b2af8360df94916a
+  Banks:
+  - {fileID: 114101773101848612}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2756
+--- !u!114 &114665252550527984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36bed43089d26427f9ae8c0b84313954, type: 3}
   m_Name: Season
   m_EditorClassIdentifier: 
   Name: Season
   Min: 0
   Max: 3
+  Default: 0
+  Exists: 1
+--- !u!114 &114803248241248948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c82487733a44c86a458746137aa655, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Pause Menu
+  guid: 4a2dda68edef2848ab446796b1a33c4e
+  Banks:
+  - {fileID: 114101773101848612}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &114964147450202250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36bed43089d26427f9ae8c0b84313954, type: 3}
+  m_Name: Narrator
+  m_EditorClassIdentifier: 
+  Name: Narrator
+  Min: 0
+  Max: 2
   Default: 0
   Exists: 1
