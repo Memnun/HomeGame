@@ -19,8 +19,8 @@
 			<value>3</value>
 		</property>
 		<property name="enumerationLabels">
-			<value>No</value>
 			<value>Boon</value>
+			<value>No</value>
 			<value>Curse</value>
 		</property>
 		<property name="isGlobal">
